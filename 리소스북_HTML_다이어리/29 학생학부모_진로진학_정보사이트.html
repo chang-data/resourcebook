@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>학생·학부모를 위한 진로·진학 정보 사이트</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
+<style>:root{--theme:#3e9c9e;--theme-soft:#c8e0dd;--theme-pale:#e2ede9;--theme-deep:#387579}
+:root{--cream:#f7f1e8;--paper:#fffdf9;--ink:#3b3a40;--line:#e6ddd0;--muted:#8a8580;
+--sans:'Noto Sans KR','Malgun Gothic','맑은 고딕',sans-serif;--serif:'Noto Serif KR','Nanum Myeongjo',serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;height:6px;background:linear-gradient(90deg,var(--theme) 0 78%,var(--theme-soft) 78% 100%)}
+.head{max-width:1280px;margin:0 auto;padding:34px 28px 10px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.eyebrow{font-size:11px;letter-spacing:.32em;color:var(--muted);font-weight:700;text-transform:uppercase}
+.head h1{font-family:var(--serif);font-weight:900;font-size:clamp(26px,3.4vw,42px);line-height:1.15;margin:6px 0 0;color:var(--ink)}
+.head h1 .num{color:var(--theme);margin-right:.25em}
+.head .meta{font-size:12px;color:var(--muted)}
+.dots{display:flex;gap:7px;margin-top:12px}.dots i{width:9px;height:9px;border-radius:50%;display:block}
+.tabs{position:sticky;bottom:0;z-index:20;background:rgba(247,241,232,.94);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.tabs a,.tabs button{flex:0 0 auto;border:0;cursor:pointer;font:700 12px var(--sans);text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;color:var(--ink);background:var(--paper)}
+.tabs .index{background:var(--ink);color:#fff;letter-spacing:.18em;font-size:11px}
+.tabs .on{color:#fff!important}
+.foot{max-width:1280px;margin:0 auto;padding:20px 28px 30px;font-size:11px;color:var(--muted)}
+@media print{.tabs,.topbar{display:none}}
+
+.notice{background:#fbeeee;border-bottom:1px solid #edd3d3}
+.notice .in{max-width:1280px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.6;color:#6e2e3a}
+.notice .ic{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#b0485a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+.notice b{color:#8f3446}
+.wrap{max-width:1280px;margin:0 auto;padding:6px 28px 80px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.toc a{text-decoration:none;font:700 13px var(--sans);padding:8px 14px;border-radius:22px;background:var(--paper);border:1px solid #e6dccd;color:var(--ink)}
+.toc a:hover{background:var(--theme);color:#fff}
+.intro{background:var(--paper);border:1px solid #ebe2d5;border-radius:20px;padding:20px 24px;margin:8px 0 14px}
+.intro h3{margin:0 0 6px;font-family:var(--serif);font-size:22px}
+.intro p{margin:0;font-size:14.5px;line-height:1.75;color:#4b4a50}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:8px;margin-top:14px}
+.qk{text-decoration:none;background:var(--theme-pale);border-radius:12px;padding:10px 14px;display:block;color:var(--ink)}
+.qk span{display:block;font-size:12.5px;color:#55605f}.qk b{font-size:14.5px;color:var(--theme-deep)}
+.qk:hover{background:var(--theme-soft)}
+.bar{position:sticky;top:6px;z-index:10;display:flex;gap:10px;align-items:center;background:rgba(247,241,232,.95);padding:10px 0;backdrop-filter:blur(4px)}
+.search{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:9px 13px;flex:1;max-width:480px}
+.search input{border:0;outline:0;background:transparent;font:500 14px var(--sans);width:100%}
+.cnt{font-size:12.5px;color:var(--muted)}
+.sec{margin-top:30px;scroll-margin-top:60px}
+.ch{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid color-mix(in srgb,var(--c) 40%,#fff);padding-bottom:8px;margin-bottom:12px}
+.ch .cn{font-family:var(--serif);font-weight:900;font-size:30px;color:var(--c);line-height:1}
+.ch h2{margin:0;font-family:var(--serif);font-size:23px}
+.ch .cd{font-size:13.5px;color:var(--muted)}
+.ch .cc{margin-left:auto;font:800 12px var(--sans);color:var(--c);background:color-mix(in srgb,var(--c) 14%,#fff);border-radius:10px;padding:2px 9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.st{background:var(--paper);border:1px solid #e6e0d6;border-top:4px solid var(--c);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;font-size:13.5px;line-height:1.65}
+.st .sh b{display:block;font-size:16px;color:var(--ink)}
+.st .op{font-size:12px;color:var(--muted)}
+.st ul{margin:8px 0 0;padding-left:18px;flex:1}
+.st .nt{margin:8px 0 0;font-size:12px;color:#8a6a2a;background:#fff6e2;border-radius:8px;padding:5px 9px}
+.sf{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:8px}
+.who{font:700 11.5px var(--sans);color:#55605f;background:#eef3f2;border-radius:6px;padding:2px 8px}
+.go{font:800 12.5px var(--sans);text-decoration:none;color:#fff;background:var(--c);border-radius:8px;padding:6px 12px;white-space:nowrap}
+.go.off{background:#ece7de;color:#7c766d}
+.st.hide,.sec.hide{display:none}
+mark{background:#f6d77a}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:34px}
+.tip{background:#fff8ea;border:1px dashed #e6d3a8;border-radius:14px;padding:14px 18px;font-size:13.5px;line-height:1.7}
+.tip h4{margin:0 0 6px;font-size:15px;color:#8a5a12}.tip ul{margin:0;padding-left:18px}
+.src{margin-top:30px;background:var(--paper);border:1px solid #ebe2d5;border-radius:14px;padding:14px 20px;font-size:13px;line-height:1.8;color:#55524d}
+.src b{color:var(--ink)}
+@media (max-width:760px){.wrap{padding:6px 12px 60px}}
+@media print{.bar,.toc{display:none}.st{break-inside:avoid}}
+</style></head>
+<body><div class="topbar"></div><div class="notice" role="note"><div class="in"><span class="ic">!</span><div><b>안내</b> · 이 자료는 정리 과정에서 <b>오류를 포함할 수 있습니다.</b> 사이트 주소·메뉴 이름은 운영 기관 사정으로 바뀔 수 있으니 접속이 안 되면 사이트 이름으로 검색해 주세요.</div></div></div>
+<header class="head"><div><div class="eyebrow">RESOURCE BOOK · 29 · CAREER &amp; ADMISSION SITES</div>
+<h1><span class="num">29</span>학생·학부모를 위한 진로·진학 정보 사이트</h1><div class="dots"><i style="background:#b0485a"></i><i style="background:#4f6fa8"></i><i style="background:#c2708f"></i><i style="background:#e08a6d"></i><i style="background:#e28fae"></i><i style="background:#5e9e6b"></i><i style="background:#3e9c9e"></i><i style="background:#3a86c2"></i><i style="background:#e7963a"></i><i style="background:#8c78c0"></i><i style="background:#cf6a3a"></i><i style="background:#9a6e50"></i><i style="background:#2f7462"></i></div></div>
+<div class="meta">9개 분야 · 36개 사이트 · 자료 출처: 목감고 신동엽 선생님</div></header>
+<main class="wrap"><nav class="toc"><a href="#c1">대입 정보·상담</a><a href="#c2">진로 설계·고교학점제</a><a href="#c3">기출문제·학습 자료</a><a href="#c4">대입 유튜브 채널</a><a href="#c5">직업·취업·자격</a><a href="#c6">탐구활동·수행평가 자료</a><a href="#c7">독서·도서관</a><a href="#c8">예체능 진학</a><a href="#c9">증명서 발급</a></nav>
+<div class="intro"><h3>이럴 땐 여기부터</h3><p>공공기관·교육청·대학이 운영하는 사이트를 중심으로 모았어요. 상황에 맞는 사이트를 고르고, 카드의 <b>사이트 열기</b>로 바로 접속하세요.</p><div class="qgrid"><a class="qk" href="#c1"><span>대학 입시 결과·전형이 궁금할 때</span><b>어디가</b></a><a class="qk" href="#c1"><span>1:1 진학 상담을 받고 싶을 때</span><b>어디가 · 경기진학정보센터</b></a><a class="qk" href="#c2"><span>진로를 아직 못 정했을 때</span><b>커리어넷 · 꿈it다</b></a><a class="qk" href="#c2"><span>과목 선택이 고민될 때</span><b>함께학교 진로·학업 설계</b></a><a class="qk" href="#c3"><span>기출 문제를 풀어 보고 싶을 때</span><b>평가원 · 서울시교육청</b></a><a class="qk" href="#c6"><span>탐구·수행평가 주제를 찾을 때</span><b>빅카인즈 · RISS · 통계활용대회</b></a><a class="qk" href="#c7"><span>읽을 책을 고를 때</span><b>책따세 · 학과별 권장도서</b></a><a class="qk" href="#c9"><span>증명서가 필요할 때</span><b>나이스 대국민서비스</b></a></div></div>
+<div class="bar"><label class="search">🔍<input id="qq" type="search" placeholder="사이트·기능 검색 (예: 기출, 논문, 상담, 증명서)"></label><span class="cnt" id="cnt"></span></div>
+<section class="sec" id="c1"><div class="ch" style="--c:#3e9c9e"><span class="cn">01</span><h2>대입 정보·상담</h2><span class="cd">대학별 전형, 입시 결과, 1:1 진학 상담</span><span class="cc">6</span></div><div class="grid"><div class="st" style="--c:#3e9c9e" data-q="대입정보포털 어디가 한국대학교육협의회 학생·학부모 대학·학과별 전형 정보와 입시 결과(입학성적·경쟁률) 학교별 학과 개설 현황 대교협 대입상담교사단 온라인 진학 상담"><div class="sh"><b>대입정보포털 어디가</b><span class="op">한국대학교육협의회</span></div>
+<ul><li>대학·학과별 전형 정보와 입시 결과(입학성적·경쟁률)</li><li>학교별 학과 개설 현황</li><li>대교협 대입상담교사단 온라인 진학 상담</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.adiga.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#3e9c9e" data-q="전문대학포털 한국전문대학교육협의회 학생·학부모 전문대 학과 검색, 입시 결과 전문대 진학 상담"><div class="sh"><b>전문대학포털</b><span class="op">한국전문대학교육협의회</span></div>
+<ul><li>전문대 학과 검색, 입시 결과</li><li>전문대 진학 상담</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.procollege.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#3e9c9e" data-q="경기진학정보센터 경기도교육청 경기 학생·학부모 대입 진학 자료 1:1 대입 진학 상담(화상·대면) 신청"><div class="sh"><b>경기진학정보센터</b><span class="op">경기도교육청</span></div>
+<ul><li>대입 진학 자료</li><li>1:1 대입 진학 상담(화상·대면) 신청</li></ul>
+<div class="sf"><span class="who">경기 학생·학부모</span><a class="go" href="https://more.goe.go.kr/jinhak" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#3e9c9e" data-q="서울진로진학정보센터 · 학종 안내 서울특별시교육청 학생·학부모 대학별 학생부종합전형 평가 방법과 준비 방법 안내"><div class="sh"><b>서울진로진학정보센터 · 학종 안내</b><span class="op">서울특별시교육청</span></div>
+<ul><li>대학별 학생부종합전형 평가 방법과 준비 방법 안내</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.jinhak.or.kr/subList/20000000284" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#3e9c9e" data-q="서울진로진학정보센터 · 대학별고사 분석 서울특별시교육청 학생 논술, 학종 면접 기출문제 분석"><div class="sh"><b>서울진로진학정보센터 · 대학별고사 분석</b><span class="op">서울특별시교육청</span></div>
+<ul><li>논술, 학종 면접 기출문제 분석</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://www.jinhak.or.kr/subList/20000000267" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#3e9c9e" data-q="서울대 입학정보 웹진 아로리 서울대학교 학생·학부모 합격 수기 추천 도서 학생부종합전형 준비 안내"><div class="sh"><b>서울대 입학정보 웹진 아로리</b><span class="op">서울대학교</span></div>
+<ul><li>합격 수기</li><li>추천 도서</li><li>학생부종합전형 준비 안내</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://snuarori.snu.ac.kr/" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div></div></section><section class="sec" id="c2"><div class="ch" style="--c:#8c78c0"><span class="cn">02</span><h2>진로 설계·고교학점제</h2><span class="cd">진로 탐색, 심리검사, 과목 선택과 학업 설계</span><span class="cc">4</span></div><div class="grid"><div class="st" style="--c:#8c78c0" data-q="커리어넷 한국직업능력연구원 (국가 진로정보망) 학생·학부모 진로·직업 정보 진로 심리검사 온라인 진로 상담 진로 교육 자료"><div class="sh"><b>커리어넷</b><span class="op">한국직업능력연구원 (국가 진로정보망)</span></div>
+<ul><li>진로·직업 정보</li><li>진로 심리검사</li><li>온라인 진로 상담</li><li>진로 교육 자료</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.career.go.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#8c78c0" data-q="함께학교 교육부 학생·학부모 학생·학부모·교사 소통 플랫폼 스터디카페 &gt; 진로·학업 설계 컨설팅 신청"><div class="sh"><b>함께학교</b><span class="op">교육부</span></div>
+<ul><li>학생·학부모·교사 소통 플랫폼</li><li>스터디카페 &gt; 진로·학업 설계 컨설팅 신청</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.togetherschool.go.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#8c78c0" data-q="에듀넷·티-클리어 한국교육학술정보원 학생·학부모 교육정책 &gt; 고교학점제·교육과정 안내 각종 학습 자료"><div class="sh"><b>에듀넷·티-클리어</b><span class="op">한국교육학술정보원</span></div>
+<ul><li>교육정책 &gt; 고교학점제·교육과정 안내</li><li>각종 학습 자료</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.edunet.net" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#8c78c0" data-q="꿈it(잇)다 경기도교육청 경기 학생 AI 진로 설계, 진로 심리검사 진로 로드맵(진로 탐색·진로 체험 등) 진학 로드맵(진학 정보) AI 모의면접"><div class="sh"><b>꿈it(잇)다</b><span class="op">경기도교육청</span></div>
+<ul><li>AI 진로 설계, 진로 심리검사</li><li>진로 로드맵(진로 탐색·진로 체험 등)</li><li>진학 로드맵(진학 정보)</li><li>AI 모의면접</li></ul><p class="nt">경기도교육청 계정으로 이용. 학교 안내에 따라 접속하세요.</p>
+<div class="sf"><span class="who">경기 학생</span><span class="go off">검색해서 접속</span></div></div></div></section><section class="sec" id="c3"><div class="ch" style="--c:#2f7462"><span class="cn">03</span><h2>기출문제·학습 자료</h2><span class="cd">학력평가·수능 기출과 디지털 학습 자료</span><span class="cc">3</span></div><div class="grid"><div class="st" style="--c:#2f7462" data-q="서울시교육청 전국연합학력평가 자료 서울특별시교육청 학생 연도·월을 선택해 학력평가 문제·정답 조회"><div class="sh"><b>서울시교육청 전국연합학력평가 자료</b><span class="op">서울특별시교육청</span></div>
+<ul><li>연도·월을 선택해 학력평가 문제·정답 조회</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://www.sen.go.kr/user/bbs/BD_selectBbsList.do?q_bbsSn=1036" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#2f7462" data-q="한국교육과정평가원 수능 자료실 한국교육과정평가원 학생 수능·수능 모의평가 문제 새 수능 체제 예시 문항 등"><div class="sh"><b>한국교육과정평가원 수능 자료실</b><span class="op">한국교육과정평가원</span></div>
+<ul><li>수능·수능 모의평가 문제</li><li>새 수능 체제 예시 문항 등</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://www.suneung.re.kr/boardCnts/list.do?boardID=1500234&amp;m=0403&amp;s=suneung&amp;searchStr=" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#2f7462" data-q="하이러닝 경기도교육청 경기 학생·교사 AI 서·논술형 평가 AI 디지털 교육 자료 (교직원) 미리캔버스 프로 무료 사용"><div class="sh"><b>하이러닝</b><span class="op">경기도교육청</span></div>
+<ul><li>AI 서·논술형 평가</li><li>AI 디지털 교육 자료</li><li>(교직원) 미리캔버스 프로 무료 사용</li></ul>
+<div class="sf"><span class="who">경기 학생·교사</span><a class="go" href="https://hi.goe.go.kr/" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div></div></section><section class="sec" id="c4"><div class="ch" style="--c:#c2708f"><span class="cn">04</span><h2>대입 유튜브 채널</h2><span class="cd">설명회·전형 안내를 영상으로</span><span class="cc">2</span></div><div class="grid"><div class="st" style="--c:#c2708f" data-q="쎈진학 유튜브 채널 서울진로진학정보센터 학생·학부모 서울진로진학정보센터의 대입 설명 영상"><div class="sh"><b>쎈진학 유튜브 채널</b><span class="op">서울진로진학정보센터</span></div>
+<ul><li>서울진로진학정보센터의 대입 설명 영상</li></ul><p class="nt">유튜브에서 채널 이름으로 검색하세요.</p>
+<div class="sf"><span class="who">학생·학부모</span><span class="go off">검색해서 접속</span></div></div><div class="st" style="--c:#c2708f" data-q="대학어디가 TV 한국대학교육협의회 학생·학부모 대교협의 대입 유튜브 채널"><div class="sh"><b>대학어디가 TV</b><span class="op">한국대학교육협의회</span></div>
+<ul><li>대교협의 대입 유튜브 채널</li></ul><p class="nt">유튜브에서 채널 이름으로 검색하세요.</p>
+<div class="sf"><span class="who">학생·학부모</span><span class="go off">검색해서 접속</span></div></div></div></section><section class="sec" id="c5"><div class="ch" style="--c:#5e9e6b"><span class="cn">05</span><h2>직업·취업·자격</h2><span class="cd">일자리, 임금, 국가자격 정보</span><span class="cc">3</span></div><div class="grid"><div class="st" style="--c:#5e9e6b" data-q="고용24 (구 워크넷) 고용노동부 학생·학부모 채용 정보 &gt; 일자리 찾기 취업 지원 &gt; 취업 가이드 &gt; 직업심리검사"><div class="sh"><b>고용24 (구 워크넷)</b><span class="op">고용노동부</span></div>
+<ul><li>채용 정보 &gt; 일자리 찾기</li><li>취업 지원 &gt; 취업 가이드 &gt; 직업심리검사</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.work24.go.kr/cm/main.do" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#5e9e6b" data-q="임금직업포털 한국고용정보원 학생·학부모 맞춤형 임금 정보 직업 내비게이션 등"><div class="sh"><b>임금직업포털</b><span class="op">한국고용정보원</span></div>
+<ul><li>맞춤형 임금 정보</li><li>직업 내비게이션 등</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.wagework.go.kr/pt/index.do" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#5e9e6b" data-q="큐넷 (Q-Net) 한국산업인력공단 학생 국가자격증 시험 정보와 접수"><div class="sh"><b>큐넷 (Q-Net)</b><span class="op">한국산업인력공단</span></div>
+<ul><li>국가자격증 시험 정보와 접수</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://www.q-net.or.kr/man001.do?gSite=Q" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div></div></section><section class="sec" id="c6"><div class="ch" style="--c:#e7963a"><span class="cn">06</span><h2>탐구활동·수행평가 자료</h2><span class="cd">주제 탐구, 수행평가, 창체 활동에 쓰는 자료</span><span class="cc">9</span></div><div class="grid"><div class="st" style="--c:#e7963a" data-q="전국학생통계활용대회 국가데이터처 학생 통계포스터 수상작품(고등부) 통계를 활용한 주제 탐구 활동 작성 방법과 요령"><div class="sh"><b>전국학생통계활용대회</b><span class="op">국가데이터처</span></div>
+<ul><li>통계포스터 수상작품(고등부)</li><li>통계를 활용한 주제 탐구 활동 작성 방법과 요령</li></ul><p class="nt">사이트 이름으로 검색하세요.</p>
+<div class="sf"><span class="who">학생</span><span class="go off">검색해서 접속</span></div></div><div class="st" style="--c:#e7963a" data-q="YEEP (청소년 창업체험교육 플랫폼) 창업체험교육 플랫폼 학생 자료실 &gt; 기타 &gt; 분야별 창업 이슈 청소년 창업·발명 아이디어 자료, 신기술 소개"><div class="sh"><b>YEEP (청소년 창업체험교육 플랫폼)</b><span class="op">창업체험교육 플랫폼</span></div>
+<ul><li>자료실 &gt; 기타 &gt; 분야별 창업 이슈</li><li>청소년 창업·발명 아이디어 자료, 신기술 소개</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://www.yeep.go.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="빅카인즈 한국언론진흥재단 학생 뉴스 검색 &gt; 뉴스 분석: 관계도 분석, 키워드 트렌드, 연관어 분석"><div class="sh"><b>빅카인즈</b><span class="op">한국언론진흥재단</span></div>
+<ul><li>뉴스 검색 &gt; 뉴스 분석: 관계도 분석, 키워드 트렌드, 연관어 분석</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://www.bigkinds.or.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="매일경제 청소년 경제 찬반토론 매일경제 학생 찬반 토론용 칼럼 모음"><div class="sh"><b>매일경제 청소년 경제 찬반토론</b><span class="op">매일경제</span></div>
+<ul><li>찬반 토론용 칼럼 모음</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="http://teen.mk.co.kr/economy/economy01_02.php?offset=18&amp;boardid=economy&amp;sk&amp;sw&amp;category&amp;c1=2&amp;c2=9&amp;c3=18" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="생글생글 · 시사이슈 찬반토론 한국경제신문 학생 찬반 토론용 칼럼 모음"><div class="sh"><b>생글생글 · 시사이슈 찬반토론</b><span class="op">한국경제신문</span></div>
+<ul><li>찬반 토론용 칼럼 모음</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://sgsg.hankyung.com/series/1509001006" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="네이버 뉴스 오피니언 네이버 학생 오피니언 &gt; 전체 연재에서 관심 분야 구독"><div class="sh"><b>네이버 뉴스 오피니언</b><span class="op">네이버</span></div>
+<ul><li>오피니언 &gt; 전체 연재에서 관심 분야 구독</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://news.naver.com/opinion/home" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="RISS 한국교육학술정보원 학생·교사 논문 검색(무료·유료 열람)"><div class="sh"><b>RISS</b><span class="op">한국교육학술정보원</span></div>
+<ul><li>논문 검색(무료·유료 열람)</li></ul>
+<div class="sf"><span class="who">학생·교사</span><a class="go" href="https://www.riss.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="DBpia (디비피아) 누리미디어 학생·교사 논문 검색(유료 열람)"><div class="sh"><b>DBpia (디비피아)</b><span class="op">누리미디어</span></div>
+<ul><li>논문 검색(유료 열람)</li></ul>
+<div class="sf"><span class="who">학생·교사</span><a class="go" href="https://www.dbpia.co.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#e7963a" data-q="행복한 교육 교육부 학생 교육계 이슈 모음 사범대·교대 준비(논술·면접 등)에 활용"><div class="sh"><b>행복한 교육</b><span class="op">교육부</span></div>
+<ul><li>교육계 이슈 모음</li><li>사범대·교대 준비(논술·면접 등)에 활용</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://happyedu.moe.go.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div></div></section><section class="sec" id="c7"><div class="ch" style="--c:#9a6e50"><span class="cn">07</span><h2>독서·도서관</h2><span class="cd">추천 도서와 무료 전자책·논문</span><span class="cc">5</span></div><div class="grid"><div class="st" style="--c:#9a6e50" data-q="책따세 (책으로 따뜻한 세상 만드는 교사들) 책따세 학생·학부모 공식 추천도서: 분야별·수준별·연도별·상황별 도서 목록"><div class="sh"><b>책따세 (책으로 따뜻한 세상 만드는 교사들)</b><span class="op">책따세</span></div>
+<ul><li>공식 추천도서: 분야별·수준별·연도별·상황별 도서 목록</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="http://readread.or.kr/recommended-books/" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#9a6e50" data-q="한국출판문화산업진흥원 추천도서 한국출판문화산업진흥원 학생·학부모 예상 독자(중·고등)와 분야를 골라 추천 도서 조회"><div class="sh"><b>한국출판문화산업진흥원 추천도서</b><span class="op">한국출판문화산업진흥원</span></div>
+<ul><li>예상 독자(중·고등)와 분야를 골라 추천 도서 조회</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://bookapply.kpipa.or.kr/front/select/bookList.do" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#9a6e50" data-q="경기도교육청 전자도서관 경기도교육청 경기 학생·학부모 전자책·오디오북: 구독 대출형 전자책 무료 열람 온라인 강의 콘텐츠 &gt; 학술DB &gt; 스콜라 관외 이용(무료 논문 열람)"><div class="sh"><b>경기도교육청 전자도서관</b><span class="op">경기도교육청</span></div>
+<ul><li>전자책·오디오북: 구독 대출형 전자책 무료 열람</li><li>온라인 강의 콘텐츠 &gt; 학술DB &gt; 스콜라 관외 이용(무료 논문 열람)</li></ul>
+<div class="sf"><span class="who">경기 학생·학부모</span><a class="go" href="https://lib.goe.go.kr/elib/index.do" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#9a6e50" data-q="고려대 도서관 학과별 권장도서 고려대학교 도서관 학생 희망 학과를 눌러 학과별 권장도서 확인"><div class="sh"><b>고려대 도서관 학과별 권장도서</b><span class="op">고려대학교 도서관</span></div>
+<ul><li>희망 학과를 눌러 학과별 권장도서 확인</li></ul>
+<div class="sf"><span class="who">학생</span><a class="go" href="https://library.korea.ac.kr/datause/collection/by-dept/libart/" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#9a6e50" data-q="이화여대 도서관 신입생 추천자료 이화여자대학교 도서관 학생 신입생을 위한 추천자료 &gt; 주제 분류에서 희망 학과 선택"><div class="sh"><b>이화여대 도서관 신입생 추천자료</b><span class="op">이화여자대학교 도서관</span></div>
+<ul><li>신입생을 위한 추천자료 &gt; 주제 분류에서 희망 학과 선택</li></ul><p class="nt">도서관 누리집에서 해당 학번용 추천자료를 찾으세요.</p>
+<div class="sf"><span class="who">학생</span><span class="go off">검색해서 접속</span></div></div></div></section><section class="sec" id="c8"><div class="ch" style="--c:#4f6fa8"><span class="cn">08</span><h2>예체능 진학</h2><span class="cd">미대·체대·음대 진학 정보</span><span class="cc">3</span></div><div class="grid"><div class="st" style="--c:#4f6fa8" data-q="엠굿 (미대 진학) 엠굿 학생·학부모 미대 진학 정보"><div class="sh"><b>엠굿 (미대 진학)</b><span class="op">엠굿</span></div>
+<ul><li>미대 진학 정보</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.mgood.co.kr/main/index.php" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#4f6fa8" data-q="KUSF 한국대학스포츠협의회 한국대학스포츠협의회 학생·학부모 체대 진학 정보"><div class="sh"><b>KUSF 한국대학스포츠협의회</b><span class="op">한국대학스포츠협의회</span></div>
+<ul><li>체대 진학 정보</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://info.kusf.or.kr/kusf/portal/main/main.do" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div><div class="st" style="--c:#4f6fa8" data-q="음대 진학 정보 카페 네이버 카페 학생·학부모 음대 진학 정보"><div class="sh"><b>음대 진학 정보 카페</b><span class="op">네이버 카페</span></div>
+<ul><li>음대 진학 정보</li></ul><p class="nt">민간 커뮤니티이므로 정보는 대학 모집요강으로 다시 확인하세요.</p>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://cafe.naver.com/collegeofmusic" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div></div></section><section class="sec" id="c9"><div class="ch" style="--c:#e28fae"><span class="cn">09</span><h2>증명서 발급</h2><span class="cd">학교생활기록부·각종 증명서</span><span class="cc">1</span></div><div class="grid"><div class="st" style="--c:#e28fae" data-q="나이스 대국민서비스 교육부 학생·학부모 학교생활기록부 졸업(예정)증명서, 재학증명서, 성적증명서 교육비 납입 증명서, 교육급여 수급자 증명서"><div class="sh"><b>나이스 대국민서비스</b><span class="op">교육부</span></div>
+<ul><li>학교생활기록부</li><li>졸업(예정)증명서, 재학증명서, 성적증명서</li><li>교육비 납입 증명서, 교육급여 수급자 증명서</li></ul>
+<div class="sf"><span class="who">학생·학부모</span><a class="go" href="https://www.neis.go.kr" target="_blank" rel="noopener">사이트 열기 ↗</a></div></div></div></section>
+<div class="tips">
+<div class="tip"><h4>학생에게</h4><ul><li>입시 정보는 <b>대학 모집요강과 어디가</b>를 기준으로 확인해요.</li><li>탐구 주제는 빅카인즈 → 찬반 칼럼 → RISS 논문 순으로 넓혀 가면 좋아요.</li><li>심리검사 결과는 출력하거나 저장해 두고 상담 때 가져와요.</li></ul></div>
+<div class="tip"><h4>학부모에게</h4><ul><li>어디가·지역 진학정보센터의 <b>무료 1:1 상담</b>을 먼저 활용해 보세요.</li><li>고교학점제 과목 선택은 함께학교 진로·학업 설계 자료가 도움이 돼요.</li><li>각종 증명서는 나이스 대국민서비스에서 온라인으로 발급할 수 있어요.</li></ul></div>
+<div class="tip"><h4>정보를 볼 때 주의</h4><ul><li>민간 카페·커뮤니티 정보는 공식 자료로 다시 확인해요.</li><li>전형 정보는 <b>해당 학년도</b> 자료인지 꼭 확인해요.</li><li>로그인이 필요한 사이트는 학교 안내에 따라 가입해요.</li></ul></div>
+</div>
+<div class="src"><b>출처</b> · 「학생·학부모를 위한 진로·진학 정보 사이트」(<b>자료 출처: 목감고 신동엽 선생님</b>)의 사이트 목록과 활용 내용을 바탕으로 리소스북 형식에 맞게 다시 구성했어요. 원자료에 주소가 없던 일부 사이트(어디가, 전문대학포털, 경기진학정보센터, 커리어넷, 함께학교, 에듀넷 등)는 각 기관의 공식 주소를 덧붙였어요.</div>
+</main><nav class="tabs"><a class="index" href="index.html">INDEX</a><a href="#c1" data-c="#3e9c9e" data-bg="#d7e7e4" style="background:#d7e7e4;color:#3a8083">대입 정보·상담</a><a href="#c2" data-c="#8c78c0" data-bg="#e6e0ea" style="background:#e6e0ea;color:#74659d">진로 설계·고교학점제</a><a href="#c3" data-c="#2f7462" data-bg="#d4dfd8" style="background:#d4dfd8;color:#2f6256">기출문제·학습 자료</a><a href="#c4" data-c="#c2708f" data-bg="#f1dee1" style="background:#f1dee1;color:#9d5f78">대입 유튜브 채널</a><a href="#c5" data-c="#5e9e6b" data-bg="#dde8d9" style="background:#dde8d9;color:#52825d">직업·취업·자격</a><a href="#c6" data-c="#e7963a" data-bg="#f9e6d0" style="background:#f9e6d0;color:#b97c38">탐구활동·수행평가 자료</a><a href="#c7" data-c="#9a6e50" data-bg="#e9ded4" style="background:#e9ded4;color:#7f5e49">독서·도서관</a><a href="#c8" data-c="#4f6fa8" data-bg="#dadee6" style="background:#dadee6;color:#475e8b">예체능 진학</a><a href="#c9" data-c="#e28fae" data-bg="#f8e5e7" style="background:#f8e5e7;color:#b5768f">증명서 발급</a></nav><script>
+const qq=document.getElementById('qq'),cnt=document.getElementById('cnt'),ST=[...document.querySelectorAll('.st')],SC=[...document.querySelectorAll('.sec')];
+function run(){const v=qq.value.trim().toLowerCase();let n=0;ST.forEach(s=>{const ok=!v||s.dataset.q.toLowerCase().includes(v);s.classList.toggle('hide',!ok);if(ok)n++});
+SC.forEach(c=>c.classList.toggle('hide',!c.querySelector('.st:not(.hide)')));cnt.textContent=v?n+'개 사이트':'전체 '+ST.length+'개 사이트'}
+qq.oninput=run;run();
+const TL=[...document.querySelectorAll('.tabs a[data-c]')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){TL.forEach(a=>{a.classList.remove('on');a.style.background=a.dataset.bg});const a=TL.find(x=>x.getAttribute('href')=='#'+e.target.id);if(a){a.classList.add('on');a.style.background=a.dataset.c;a.scrollIntoView({block:'nearest',inline:'center'})}}})},{rootMargin:'-20% 0px -70% 0px'});
+SC.forEach(s=>io.observe(s));
+</script></body></html>
