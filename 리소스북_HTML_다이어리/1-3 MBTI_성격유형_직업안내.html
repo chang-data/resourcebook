@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MBTI 성격유형별 특성과 직업 안내</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
+<style>:root{--theme:#c2708f;--theme-soft:#ecd3d8;--theme-pale:#f5e7e7;--theme-deep:#8e586f}
+:root{--cream:#f7f1e8;--paper:#fffdf9;--ink:#3b3a40;--line:#e6ddd0;--muted:#8a8580;
+--sans:'Noto Sans KR','Malgun Gothic','맑은 고딕',sans-serif;--serif:'Noto Serif KR','Nanum Myeongjo',serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;height:6px;background:linear-gradient(90deg,var(--theme) 0 78%,var(--theme-soft) 78% 100%)}
+.head{max-width:1280px;margin:0 auto;padding:34px 28px 10px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.eyebrow{font-size:11px;letter-spacing:.32em;color:var(--muted);font-weight:700;text-transform:uppercase}
+.head h1{font-family:var(--serif);font-weight:900;font-size:clamp(26px,3.4vw,42px);line-height:1.15;margin:6px 0 0;color:var(--ink)}
+.head h1 .num{color:var(--theme);margin-right:.25em}
+.head .meta{font-size:12px;color:var(--muted)}
+.dots{display:flex;gap:7px;margin-top:12px}.dots i{width:9px;height:9px;border-radius:50%;display:block}
+.tabs{position:sticky;bottom:0;z-index:20;background:rgba(247,241,232,.94);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.tabs a,.tabs button{flex:0 0 auto;border:0;cursor:pointer;font:700 12px var(--sans);text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;color:var(--ink);background:var(--paper)}
+.tabs .index{background:var(--ink);color:#fff;letter-spacing:.18em;font-size:11px}
+.tabs .on{color:#fff!important}
+.foot{max-width:1280px;margin:0 auto;padding:20px 28px 30px;font-size:11px;color:var(--muted)}
+@media print{.tabs,.topbar{display:none}}
+
+.wrap{max-width:1180px;margin:0 auto;padding:6px 28px 90px}
+.notice{background:#fbeeee;border-bottom:1px solid #edd3d3}
+.notice .in{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;gap:12px;align-items:center;font-size:14px;line-height:1.65;color:#6e2e3a}
+.notice .ic{flex:0 0 26px;height:26px;border-radius:50%;background:#b0485a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
+.nav a{font:700 13px var(--sans);text-decoration:none;background:var(--paper);border:1px solid #e6ddd0;border-radius:20px;padding:7px 14px}
+.nav a:hover{background:var(--theme-pale)}
+.sec{background:var(--paper);border:1px solid #ebe2d5;border-radius:22px;padding:24px 26px;margin:0 0 18px;box-shadow:0 10px 30px -24px rgba(59,58,64,.5);scroll-margin-top:20px}
+.sec>h2{font-family:var(--serif);font-size:24px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.sec>h2 .no{font:800 12px var(--sans);color:#fff;background:var(--theme);border-radius:6px;padding:4px 9px;letter-spacing:.1em}
+.sec>.lead{margin:4px 0 16px;color:#5b5960;font-size:15px;line-height:1.75}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.kp div{background:var(--theme-pale);border-radius:14px;padding:14px 16px;font-size:14px;line-height:1.7}
+.kp b:first-child{display:block;font-size:15.5px;margin-bottom:3px;color:var(--theme-deep)}
+.dim{margin:12px 0}
+.dq{font:800 13px var(--sans);color:var(--theme-deep);margin-bottom:6px}
+.dp{display:grid;grid-template-columns:1fr 40px 1fr;gap:8px;align-items:stretch}
+.side{display:flex;gap:12px;background:#fbf7f1;border:1px solid #eee5d8;border-radius:14px;padding:12px 14px}
+.side .L{flex:0 0 46px;height:46px;border-radius:12px;background:var(--theme);color:#fff;font:900 24px var(--serif);display:flex;align-items:center;justify-content:center}
+.side b{font-size:16px}.side small{color:var(--muted)}
+.side p{margin:3px 0 0;font-size:14px;line-height:1.6}.side p.ex{color:#7a6a55;font-size:13px}
+.vs{display:flex;align-items:center;justify-content:center;font:900 14px var(--serif);color:var(--muted)}
+.finder{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#fbf3f5;border:1px dashed #e6c2cf;border-radius:16px;padding:14px 16px;margin:6px 0 14px}
+.finder .lab{font:800 14px var(--sans);color:var(--theme-deep)}
+.sw{display:flex;border:1px solid #e3d3d9;border-radius:10px;overflow:hidden}
+.sw button{border:0;background:#fff;font:700 13px var(--sans);padding:8px 11px;cursor:pointer;color:var(--ink)}
+.sw button.on{background:var(--theme);color:#fff}
+.go{border:0;background:var(--ink);color:#fff;font:800 13px var(--sans);padding:9px 16px;border-radius:10px;cursor:pointer}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tc{border:0;cursor:pointer;text-align:left;background:color-mix(in srgb,var(--c) 12%,#fff);border-left:5px solid var(--c);border-radius:12px;padding:11px 13px;font-family:var(--sans);color:var(--ink);transition:transform .12s}
+.tc:hover,.tc.sel{transform:translateY(-2px);box-shadow:0 8px 20px -12px var(--c)}
+.tc.sel{background:var(--c);color:#fff}
+.tc b{display:block;font:900 19px var(--serif);letter-spacing:.04em}
+.tc span{font-size:12.5px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 0;font-size:12.5px;color:#5b5960}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.cards{margin-top:16px}
+.card{display:none;border:2px solid var(--c);border-radius:20px;padding:20px 22px;background:#fff;margin-top:12px}
+.card.show{display:block}
+.allon .card{display:block}
+.ch{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.code{display:flex;gap:4px}
+.lt{width:42px;height:50px;border-radius:10px;background:var(--c);color:#fff;font:900 26px var(--serif);display:flex;align-items:center;justify-content:center}
+.nick{font:900 22px var(--serif)}
+.one{font-size:14.5px;color:#5b5960;margin-top:2px}
+.pairtag{display:inline-block;margin-top:6px;font:800 11.5px var(--sans);color:#fff;background:var(--c);border-radius:6px;padding:3px 8px}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cg section{background:color-mix(in srgb,var(--c) 8%,#fff);border-radius:14px;padding:12px 14px}
+.card h4{margin:0 0 6px;font-size:14.5px}
+.cg ul{margin:0;padding-left:18px;font-size:14px;line-height:1.7}
+.jobs{margin-top:12px}
+.jobs h4{margin:12px 0 6px}
+.fd,.jb,.mj{display:inline-block;margin:0 6px 6px 0;border-radius:20px;padding:5px 11px;font-size:13.5px}
+.fd{background:var(--c);color:#fff;font-weight:700}
+.jb{background:color-mix(in srgb,var(--c) 14%,#fff);border:1px solid color-mix(in srgb,var(--c) 35%,#fff);font-weight:600}
+.mj{background:#f3efe7}
+.hint{margin:10px 0 0;font-size:13px;line-height:1.7;color:#6b655c;background:#fbf7ef;border-radius:10px;padding:9px 12px}
+.prs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.pr{border-top:6px solid var(--c);background:#fff;border:1px solid #ece3d7;border-top:6px solid var(--c);border-radius:14px;padding:14px 16px}
+.pr .pc{font:900 28px var(--serif);color:var(--c)}
+.pr b{font-size:15.5px}.pr p{font-size:14px;line-height:1.65;margin:6px 0}
+.pf{font-size:13px;margin:4px 0;line-height:1.6}.pf span{display:inline-block;font:800 11px var(--sans);color:#fff;background:var(--c);border-radius:5px;padding:1px 6px;margin-right:6px}
+.pt{margin-top:8px;display:flex;gap:5px;flex-wrap:wrap}
+.mini{border:1px solid var(--c);background:#fff;color:var(--c);font:800 12px var(--sans);border-radius:7px;padding:3px 8px;cursor:pointer}
+.research{margin-top:12px;background:#f6f2fb;border-radius:12px;padding:12px 16px;font-size:14px;line-height:1.7}
+.warn{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
+.warn div{border-radius:14px;padding:14px 16px;font-size:14px;line-height:1.7;background:#fff8ea;border:1px solid #f0e0b8}
+.warn b:first-child{display:block;font-size:15.5px;margin-bottom:4px;color:#8a5a12}
+.warn div.ok{background:#eef6f0;border-color:#cfe5d5}.warn div.ok b:first-child{color:#2f7462}
+.act{counter-reset:q}
+.act li{list-style:none;position:relative;padding:10px 12px 10px 46px;margin:0 0 8px;background:#fbf7f1;border-radius:12px;font-size:14.5px;line-height:1.7}
+.act li:before{counter-increment:q;content:counter(q);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--theme);color:#fff;font:800 13px var(--sans);display:flex;align-items:center;justify-content:center}
+.act small{display:block;color:#8a6a2a;font-size:12.5px}
+.teacher{margin-top:12px;background:var(--theme-pale);border-radius:12px;padding:12px 16px;font-size:14px;line-height:1.75}
+.src ol{margin:0;padding-left:20px;font-size:13px;line-height:1.75;color:#4b4a50}
+.src li{margin-bottom:4px;word-break:break-all}
+.toggle{border:1px solid #d9cbb5;background:#fff;font:700 13px var(--sans);padding:7px 13px;border-radius:9px;cursor:pointer;margin-left:auto}
+@media (max-width:760px){.wrap{padding:6px 12px 80px}.tgrid{grid-template-columns:repeat(2,1fr)}.cg{grid-template-columns:1fr}.dp{grid-template-columns:1fr}.vs{display:none}.sec{padding:18px 16px}}
+@media print{.finder,.nav,.toggle{display:none}.card{display:block!important;break-inside:avoid}.sec{break-inside:avoid-page}}
+</style></head>
+<body><div class="topbar"></div>
+<header class="head"><div><div class="eyebrow">RESOURCE BOOK · 1-3 · PERSONALITY TYPE &amp; CAREERS</div>
+<h1><span class="num">1-3</span>MBTI 성격유형별 특성과 직업 안내</h1><div class="dots"><i style="background:#b0485a"></i><i style="background:#4f6fa8"></i><i style="background:#c2708f"></i><i style="background:#e08a6d"></i><i style="background:#e28fae"></i><i style="background:#5e9e6b"></i><i style="background:#3e9c9e"></i><i style="background:#3a86c2"></i><i style="background:#e7963a"></i><i style="background:#8c78c0"></i><i style="background:#cf6a3a"></i><i style="background:#9a6e50"></i><i style="background:#2f7462"></i></div></div>
+<div class="meta">16유형 · 학생 상담용 · 출처 14건</div></header>
+<div class="notice" role="note"><div class="in"><span class="ic">!</span><div><b>먼저 읽어 주세요</b> · MBTI는 "어떤 사람인지 정해 주는 검사"가 아니라 <b>내가 더 편하게 느끼는 방식</b>을 알아보는 도구예요. 결과는 나를 이해하는 <b>대화의 출발점</b>으로만 쓰고, 진로는 흥미·적성·가치관과 함께 결정해요.</div></div></div>
+<main class="wrap">
+<nav class="nav"><a href="#about">① MBTI란?</a><a href="#dims">② 4가지 선호</a><a href="#types">③ 16유형 & 직업</a><a href="#pairs">④ 기질별 진로 방향</a><a href="#care">⑤ 꼭 알아둘 점</a><a href="#act">⑥ 상담 활동</a><a href="#src">출처</a></nav>
+
+<section class="sec" id="about"><h2><span class="no">01</span>MBTI, 어떤 검사일까?</h2>
+<p class="lead">MBTI(Myers-Briggs Type Indicator)는 심리학자 <b>칼 융(C. G. Jung)의 심리유형 이론</b>을 일상에서 쉽게 쓸 수 있도록 캐서린 브릭스와 이저벨 브릭스 마이어스 모녀가 만든 자기보고식 검사예요(Myers et al., 1998). 우리나라에는 1990년에 한국판이 처음 소개되었어요(김정택 외, 1995).</p>
+<div class="kp">
+<div><b>🔤 4개의 알파벳</b>에너지 방향(E/I), 정보 받아들이기(S/N), 결정하기(T/F), 생활 방식(J/P)에서 더 편한 쪽을 골라 4글자를 만들어요.</div>
+<div><b>⚖️ 좋고 나쁨이 없어요</b>오른손잡이·왼손잡이처럼 <b>더 자주, 더 편하게 쓰는 쪽</b>일 뿐이에요. 반대쪽도 얼마든지 쓸 수 있어요.</div>
+<div><b>🧭 진로 탐색에 쓰여요</b>MBTI를 만든 목적 중 하나가 <b>자신에게 맞는 일을 찾도록 돕는 것</b>이었어요(Myers &amp; Briggs Foundation).</div>
+<div><b>🧪 정식 검사 vs 무료 검사</b>인터넷 무료 검사(16Personalities)는 MBTI와 <b>다른 이론</b>(성격 5요인 기반)으로 만든 검사예요. 글자는 같아도 결과가 다를 수 있어요.</div>
+</div></section>
+
+<section class="sec" id="dims"><h2><span class="no">02</span>4가지 선호 지표 알아보기</h2>
+<p class="lead">각 지표에서 <b>"나는 어느 쪽이 더 편하지?"</b>를 떠올려 보세요. 학교생활 예시를 함께 넣었어요.</p>
+<div class="dim"><div class="dq">에너지의 방향</div><div class="dp">
+<div class="side"><div class="L">E</div><div><b>외향</b> <small>Extraversion</small><p>바깥 세상·사람들과 어울리며 에너지를 얻어요</p><p class="ex">🏫 쉬는 시간에 친구들과 떠들면 힘이 나요 · 말하면서 생각이 정리돼요</p></div></div>
+<div class="vs">vs</div>
+<div class="side"><div class="L">I</div><div><b>내향</b> <small>Introversion</small><p>혼자만의 시간·생각 속에서 에너지를 얻어요</p><p class="ex">🏫 쉬는 시간에 혼자 있으면 충전돼요 · 생각을 정리한 뒤 말해요</p></div></div></div></div><div class="dim"><div class="dq">정보를 받아들이는 방식</div><div class="dp">
+<div class="side"><div class="L">S</div><div><b>감각</b> <small>Sensing</small><p>눈에 보이는 사실과 경험을 먼저 봐요</p><p class="ex">🏫 실험 순서를 정확히 따라 해요 · &quot;구체적인 예를 보여 주세요&quot;</p></div></div>
+<div class="vs">vs</div>
+<div class="side"><div class="L">N</div><div><b>직관</b> <small>iNtuition</small><p>숨은 의미와 가능성을 먼저 떠올려요</p><p class="ex">🏫 원리부터 알고 싶어요 · &quot;이걸 다른 데 응용하면?&quot;</p></div></div></div></div><div class="dim"><div class="dq">결정을 내리는 방식</div><div class="dp">
+<div class="side"><div class="L">T</div><div><b>사고</b> <small>Thinking</small><p>논리와 원칙으로 판단해요</p><p class="ex">🏫 조별 과제에서 &quot;누가 맞는지&quot;를 따져요 · 공정함이 중요해요</p></div></div>
+<div class="vs">vs</div>
+<div class="side"><div class="L">F</div><div><b>감정</b> <small>Feeling</small><p>사람과 관계, 가치로 판단해요</p><p class="ex">🏫 조별 과제에서 &quot;모두 괜찮은지&quot;를 살펴요 · 조화가 중요해요</p></div></div></div></div><div class="dim"><div class="dq">생활하는 방식</div><div class="dp">
+<div class="side"><div class="L">J</div><div><b>판단</b> <small>Judging</small><p>계획을 세우고 미리 끝내는 게 편해요</p><p class="ex">🏫 시험 계획표를 먼저 짜요 · 마감 전에 끝내야 마음이 놓여요</p></div></div>
+<div class="vs">vs</div>
+<div class="side"><div class="L">P</div><div><b>인식</b> <small>Perceiving</small><p>상황에 맞춰 유연하게 움직이는 게 편해요</p><p class="ex">🏫 그때그때 공부할 과목을 골라요 · 마감 직전에 집중력이 올라가요</p></div></div></div></div></section>
+
+<section class="sec" id="types"><h2><span class="no">03</span>16가지 유형과 어울리는 직업</h2>
+<p class="lead">아래에서 4글자를 고르거나 표에서 유형을 누르면 <b>특징·강점·성장 포인트·직업·학과</b>를 볼 수 있어요. 유형 별칭은 학생들이 이해하기 쉽도록 이 자료에서 만든 표현이에요.</p>
+<div class="finder"><span class="lab">🔍 내 유형 찾기</span><div class="sw" data-i="0"><button data-v="E" class="on">E 외향</button><button data-v="I">I 내향</button></div><div class="sw" data-i="1"><button data-v="S" class="on">S 감각</button><button data-v="N">N 직관</button></div><div class="sw" data-i="2"><button data-v="T" class="on">T 사고</button><button data-v="F">F 감정</button></div><div class="sw" data-i="3"><button data-v="J" class="on">J 판단</button><button data-v="P">P 인식</button></div><button class="go">결과 보기</button><button class="toggle">16유형 모두 펼치기</button></div>
+<div class="tgrid"><button class="tc" data-t="ISTJ" style="--c:#4f6fa8"><b>ISTJ</b><span>꼼꼼한 계획 실천가</span></button><button class="tc" data-t="ISFJ" style="--c:#5e9e6b"><b>ISFJ</b><span>따뜻한 조력자</span></button><button class="tc" data-t="INFJ" style="--c:#c2708f"><b>INFJ</b><span>통찰력 있는 상담가</span></button><button class="tc" data-t="INTJ" style="--c:#8c78c0"><b>INTJ</b><span>전략적인 설계자</span></button><button class="tc" data-t="ISTP" style="--c:#4f6fa8"><b>ISTP</b><span>현장형 문제 해결사</span></button><button class="tc" data-t="ISFP" style="--c:#5e9e6b"><b>ISFP</b><span>섬세한 감성 실천가</span></button><button class="tc" data-t="INFP" style="--c:#c2708f"><b>INFP</b><span>가치를 따르는 이상주의자</span></button><button class="tc" data-t="INTP" style="--c:#8c78c0"><b>INTP</b><span>호기심 많은 분석가</span></button><button class="tc" data-t="ESTP" style="--c:#4f6fa8"><b>ESTP</b><span>행동파 해결사</span></button><button class="tc" data-t="ESFP" style="--c:#5e9e6b"><b>ESFP</b><span>에너지 넘치는 분위기 메이커</span></button><button class="tc" data-t="ENFP" style="--c:#c2708f"><b>ENFP</b><span>열정적인 아이디어 메이커</span></button><button class="tc" data-t="ENTP" style="--c:#8c78c0"><b>ENTP</b><span>도전하는 발명가</span></button><button class="tc" data-t="ESTJ" style="--c:#4f6fa8"><b>ESTJ</b><span>체계적인 관리자</span></button><button class="tc" data-t="ESFJ" style="--c:#5e9e6b"><b>ESFJ</b><span>친절한 협력가</span></button><button class="tc" data-t="ENFJ" style="--c:#c2708f"><b>ENFJ</b><span>사람을 이끄는 멘토</span></button><button class="tc" data-t="ENTJ" style="--c:#8c78c0"><b>ENTJ</b><span>목표를 이끄는 리더</span></button></div>
+<div class="legend"><span><i style="background:#4f6fa8"></i>ST · 사실·논리로 정확하게</span><span><i style="background:#5e9e6b"></i>SF · 사람을 실제로 돕는 일</span><span><i style="background:#c2708f"></i>NF · 사람의 가능성과 성장</span><span><i style="background:#8c78c0"></i>NT · 원리와 아이디어 탐구</span></div>
+<div class="cards"><article class="card" id="t-ISTJ" data-t="ISTJ" style="--c:#4f6fa8">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">S</span><span class="lt">T</span><span class="lt">J</span></div><div><div class="nick">꼼꼼한 계획 실천가</div><div class="one">한번 맡은 일은 끝까지 책임지는 믿음직한 사람</div>
+<div class="pairtag">기질 ST · 사실·논리로 정확하게</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>약속과 규칙을 잘 지켜요</li><li>경험과 사실을 바탕으로 판단해요</li><li>계획을 세우고 차근차근 실행해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>정확성과 성실함</li><li>자료를 체계적으로 정리하는 힘</li><li>꾸준함</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>갑자기 바뀌는 상황에 유연하게 대처하는 연습</li><li>내 생각과 감정을 말로 표현해 보기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">행정·공공</span><span class="fd">회계·금융</span><span class="fd">법·경찰</span><span class="fd">공학·품질관리</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">공무원</span><span class="jb">회계사</span><span class="jb">세무사</span><span class="jb">감사원·감사 담당</span><span class="jb">경찰관</span><span class="jb">군 장교</span><span class="jb">품질관리 엔지니어</span><span class="jb">약사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">행정학</span><span class="mj">회계·세무학</span><span class="mj">법학</span><span class="mj">경찰행정학</span><span class="mj">산업공학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>R(현실형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ISFJ" data-t="ISFJ" style="--c:#5e9e6b">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">S</span><span class="lt">F</span><span class="lt">J</span></div><div><div class="nick">따뜻한 조력자</div><div class="one">조용히 곁에서 챙겨 주는 세심한 사람</div>
+<div class="pairtag">기질 SF · 사람을 실제로 돕는 일</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>다른 사람의 필요를 잘 알아차려요</li><li>맡은 일을 성실하게 해내요</li><li>익숙한 방식과 질서를 좋아해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>배려심과 인내심</li><li>세심한 관찰력</li><li>실제적인 도움 주기</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>&quot;아니요&quot;라고 말하는 연습</li><li>새로운 방식도 한번 시도해 보기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">보건의료</span><span class="fd">교육·보육</span><span class="fd">사회복지</span><span class="fd">사무·행정 지원</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">간호사</span><span class="jb">초등교사</span><span class="jb">유치원교사</span><span class="jb">사회복지사</span><span class="jb">물리치료사</span><span class="jb">영양사</span><span class="jb">사서</span><span class="jb">보건의료정보관리사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">간호학</span><span class="mj">초등교육</span><span class="mj">유아교육</span><span class="mj">사회복지학</span><span class="mj">물리치료학</span><span class="mj">식품영양학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-INFJ" data-t="INFJ" style="--c:#c2708f">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">N</span><span class="lt">F</span><span class="lt">J</span></div><div><div class="nick">통찰력 있는 상담가</div><div class="one">사람의 마음을 깊이 이해하고 의미를 찾는 사람</div>
+<div class="pairtag">기질 NF · 사람의 가능성과 성장</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>사람과 상황의 숨은 의미를 잘 읽어요</li><li>가치와 신념을 소중히 여겨요</li><li>조용하지만 생각이 깊어요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>공감과 통찰력</li><li>글과 말로 생각을 표현하는 힘</li><li>장기적인 비전</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>완벽하려는 부담 내려놓기</li><li>생각을 혼자 품지 말고 나누기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">상담·심리</span><span class="fd">교육</span><span class="fd">예술·디자인</span><span class="fd">글쓰기·출판</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">상담심리사</span><span class="jb">임상심리사</span><span class="jb">작가</span><span class="jb">국어·예술 교사</span><span class="jb">큐레이터</span><span class="jb">플로리스트</span><span class="jb">카피라이터</span><span class="jb">교육기획자</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">심리학</span><span class="mj">상담학</span><span class="mj">국어국문학</span><span class="mj">교육학</span><span class="mj">문예창작</span><span class="mj">미술·디자인</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·A(예술형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-INTJ" data-t="INTJ" style="--c:#8c78c0">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">N</span><span class="lt">T</span><span class="lt">J</span></div><div><div class="nick">전략적인 설계자</div><div class="one">큰 그림을 그리고 혼자서도 깊이 파고드는 사람</div>
+<div class="pairtag">기질 NT · 원리와 아이디어 탐구</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>복잡한 문제의 구조를 파악해요</li><li>스스로 목표를 세우고 밀고 나가요</li><li>효율과 논리를 중요하게 여겨요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>분석력과 계획력</li><li>독립적인 학습 능력</li><li>새로운 시스템을 만드는 힘</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>다른 사람의 감정도 함께 고려하기</li><li>완벽한 계획 전에 일단 시작해 보기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">과학·연구</span><span class="fd">IT·공학</span><span class="fd">경영전략</span><span class="fd">법·특허</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">연구원(과학자)</span><span class="jb">소프트웨어 개발자</span><span class="jb">데이터 과학자</span><span class="jb">전략기획 전문가</span><span class="jb">변리사</span><span class="jb">대학교수</span><span class="jb">건축가</span><span class="jb">전문의</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">자연과학(물리·화학·생명)</span><span class="mj">컴퓨터공학</span><span class="mj">통계·데이터사이언스</span><span class="mj">경영학</span><span class="mj">건축학</span><span class="mj">의학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>I(탐구형)·E(진취형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ISTP" data-t="ISTP" style="--c:#4f6fa8">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">S</span><span class="lt">T</span><span class="lt">P</span></div><div><div class="nick">현장형 문제 해결사</div><div class="one">직접 만지고 고쳐 보며 원리를 알아내는 사람</div>
+<div class="pairtag">기질 ST · 사실·논리로 정확하게</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>손으로 직접 해 보면서 배워요</li><li>위기 상황에서 침착해요</li><li>말보다 행동이 빨라요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>기계·도구를 다루는 감각</li><li>빠른 상황 판단</li><li>효율적인 문제 해결</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>장기 계획을 세워 보는 연습</li><li>내 생각을 친구들과 나누기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">기계·자동차</span><span class="fd">항공·운송</span><span class="fd">안전·수사</span><span class="fd">공학·IT 인프라</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">자동차·기계 정비사</span><span class="jb">항공정비사</span><span class="jb">조종사</span><span class="jb">소방관</span><span class="jb">과학수사요원</span><span class="jb">네트워크·보안 엔지니어</span><span class="jb">기계공학 기술자</span><span class="jb">드론 전문가</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">기계공학</span><span class="mj">자동차공학</span><span class="mj">항공정비학</span><span class="mj">소방안전학</span><span class="mj">정보보안학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>R(현실형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ISFP" data-t="ISFP" style="--c:#5e9e6b">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">S</span><span class="lt">F</span><span class="lt">P</span></div><div><div class="nick">섬세한 감성 실천가</div><div class="one">조용하지만 따뜻하고, 손끝으로 아름다움을 표현하는 사람</div>
+<div class="pairtag">기질 SF · 사람을 실제로 돕는 일</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>지금 이 순간의 감각과 느낌에 민감해요</li><li>다른 사람에게 친절하고 겸손해요</li><li>자유롭고 편안한 분위기를 좋아해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>미적 감각과 손재주</li><li>따뜻한 배려</li><li>현재에 집중하는 힘</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>마감 일정 미리 챙기기</li><li>내 의견도 분명하게 말해 보기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">예술·디자인</span><span class="fd">보건·재활</span><span class="fd">조리·미용</span><span class="fd">동물·자연</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">그래픽·패션 디자이너</span><span class="jb">일러스트레이터</span><span class="jb">조리사·제과제빵사</span><span class="jb">작업치료사</span><span class="jb">동물보건사</span><span class="jb">미용사</span><span class="jb">플로리스트</span><span class="jb">간호사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">시각디자인</span><span class="mj">패션디자인</span><span class="mj">조리과학</span><span class="mj">작업치료학</span><span class="mj">동물보건학</span><span class="mj">뷰티디자인</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-INFP" data-t="INFP" style="--c:#c2708f">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">N</span><span class="lt">F</span><span class="lt">P</span></div><div><div class="nick">가치를 따르는 이상주의자</div><div class="one">내가 중요하게 여기는 가치를 위해 움직이는 사람</div>
+<div class="pairtag">기질 NF · 사람의 가능성과 성장</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>나만의 가치와 신념이 뚜렷해요</li><li>상상력과 창의력이 풍부해요</li><li>다른 사람의 아픔에 깊이 공감해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>창의적 표현력</li><li>진정성 있는 공감</li><li>의미를 찾는 힘</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>현실적인 실행 계획 세우기</li><li>비판을 나에 대한 공격으로 받아들이지 않기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">글쓰기·출판</span><span class="fd">상담·심리</span><span class="fd">예술</span><span class="fd">사회공헌</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">작가·편집자</span><span class="jb">상담사</span><span class="jb">심리학자</span><span class="jb">번역가</span><span class="jb">예술가</span><span class="jb">NGO 활동가</span><span class="jb">사서</span><span class="jb">국어·예술 교사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">국어국문학</span><span class="mj">문예창작</span><span class="mj">심리학</span><span class="mj">영어·외국어</span><span class="mj">사회복지학</span><span class="mj">예술 계열</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·A(예술형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-INTP" data-t="INTP" style="--c:#8c78c0">
+<div class="ch"><div class="code"><span class="lt">I</span><span class="lt">N</span><span class="lt">T</span><span class="lt">P</span></div><div><div class="nick">호기심 많은 분석가</div><div class="one">&quot;왜 그럴까?&quot;를 끝까지 파고드는 생각 탐험가</div>
+<div class="pairtag">기질 NT · 원리와 아이디어 탐구</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>논리와 원리를 따지는 것을 좋아해요</li><li>혼자 깊이 생각하는 시간이 필요해요</li><li>새로운 아이디어에 호기심이 많아요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>분석력과 논리력</li><li>독창적인 아이디어</li><li>복잡한 개념 이해</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>아이디어를 끝까지 마무리하기</li><li>생각을 쉽게 설명하는 연습</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">과학·수학</span><span class="fd">컴퓨터·IT</span><span class="fd">연구·학문</span><span class="fd">게임·기획</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">연구원</span><span class="jb">소프트웨어 개발자</span><span class="jb">수학자·통계학자</span><span class="jb">데이터 분석가</span><span class="jb">대학교수</span><span class="jb">게임 기획자</span><span class="jb">경제학자</span><span class="jb">철학·이론 연구자</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">수학</span><span class="mj">물리학</span><span class="mj">컴퓨터공학</span><span class="mj">통계학</span><span class="mj">경제학</span><span class="mj">철학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>I(탐구형)·E(진취형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ESTP" data-t="ESTP" style="--c:#4f6fa8">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">S</span><span class="lt">T</span><span class="lt">P</span></div><div><div class="nick">행동파 해결사</div><div class="one">현장에서 빠르게 움직이며 문제를 해결하는 사람</div>
+<div class="pairtag">기질 ST · 사실·논리로 정확하게</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>직접 부딪히며 배우는 걸 좋아해요</li><li>분위기를 잘 읽고 순발력이 좋아요</li><li>도전과 활동적인 일을 즐겨요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>위기 대처 능력</li><li>설득력과 협상력</li><li>실행력</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>결과를 미리 생각해 보고 행동하기</li><li>긴 과제를 끝까지 버티는 연습</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">영업·마케팅</span><span class="fd">스포츠</span><span class="fd">응급·안전</span><span class="fd">창업</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">영업 전문가</span><span class="jb">경찰관</span><span class="jb">소방관</span><span class="jb">응급구조사</span><span class="jb">스포츠 트레이너</span><span class="jb">창업가</span><span class="jb">부동산 중개사</span><span class="jb">이벤트 기획자</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">경영학</span><span class="mj">경찰행정학</span><span class="mj">응급구조학</span><span class="mj">체육·스포츠과학</span><span class="mj">마케팅</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>R(현실형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ESFP" data-t="ESFP" style="--c:#5e9e6b">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">S</span><span class="lt">F</span><span class="lt">P</span></div><div><div class="nick">에너지 넘치는 분위기 메이커</div><div class="one">함께 있는 사람들을 즐겁게 만드는 사람</div>
+<div class="pairtag">기질 SF · 사람을 실제로 돕는 일</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>사람들과 어울리는 걸 좋아해요</li><li>지금 이 순간을 즐겨요</li><li>친절하고 표현이 풍부해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>밝은 에너지와 친화력</li><li>현장 감각</li><li>사람을 편하게 해 주는 힘</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>미리 계획하고 우선순위 정하기</li><li>하기 싫은 일도 먼저 끝내 보기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">공연·방송</span><span class="fd">관광·서비스</span><span class="fd">보육·교육</span><span class="fd">스포츠·레저</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">배우·방송인</span><span class="jb">여행 가이드</span><span class="jb">항공 승무원</span><span class="jb">이벤트 플래너</span><span class="jb">유치원·보육교사</span><span class="jb">스포츠 강사</span><span class="jb">서비스 매니저</span><span class="jb">치과위생사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">연극영화</span><span class="mj">관광경영</span><span class="mj">항공서비스</span><span class="mj">유아교육</span><span class="mj">생활체육</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ENFP" data-t="ENFP" style="--c:#c2708f">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">N</span><span class="lt">F</span><span class="lt">P</span></div><div><div class="nick">열정적인 아이디어 메이커</div><div class="one">새로운 가능성을 보면 가슴이 뛰는 사람</div>
+<div class="pairtag">기질 NF · 사람의 가능성과 성장</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>아이디어가 넘치고 상상력이 풍부해요</li><li>사람들과 쉽게 친해져요</li><li>새롭고 다양한 경험을 좋아해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>창의력과 열정</li><li>사람을 격려하는 힘</li><li>여러 분야를 연결하는 능력</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>시작한 일 끝까지 마무리하기</li><li>세부 사항 꼼꼼히 확인하기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">광고·미디어</span><span class="fd">상담·교육</span><span class="fd">예술·공연</span><span class="fd">창업·기획</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">광고기획자</span><span class="jb">카피라이터</span><span class="jb">PD·기자</span><span class="jb">상담사</span><span class="jb">교사</span><span class="jb">마케터</span><span class="jb">인사·교육 담당자</span><span class="jb">창업가</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">광고홍보학</span><span class="mj">신문방송학</span><span class="mj">심리학</span><span class="mj">교육학</span><span class="mj">문화콘텐츠학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·A(예술형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ENTP" data-t="ENTP" style="--c:#8c78c0">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">N</span><span class="lt">T</span><span class="lt">P</span></div><div><div class="nick">도전하는 발명가</div><div class="one">새로운 방법을 떠올리고 토론을 즐기는 사람</div>
+<div class="pairtag">기질 NT · 원리와 아이디어 탐구</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>새로운 아이디어로 문제를 해결해요</li><li>토론과 논쟁을 즐겨요</li><li>틀에 박힌 방식을 답답해해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>창의적 문제 해결</li><li>논리적 말하기</li><li>변화에 빠른 적응</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>반복적인 일도 끝까지 해내기</li><li>다른 사람 의견 끝까지 듣기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">창업·경영</span><span class="fd">법·정책</span><span class="fd">컨설팅·마케팅</span><span class="fd">IT·공학</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">창업가</span><span class="jb">경영 컨설턴트</span><span class="jb">변호사</span><span class="jb">PD·기자</span><span class="jb">마케팅 전략가</span><span class="jb">제품 기획자</span><span class="jb">정책 분석가</span><span class="jb">엔지니어</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">경영학</span><span class="mj">법학</span><span class="mj">정치외교학</span><span class="mj">신문방송학</span><span class="mj">산업공학</span><span class="mj">컴퓨터공학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>I(탐구형)·E(진취형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ESTJ" data-t="ESTJ" style="--c:#4f6fa8">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">S</span><span class="lt">T</span><span class="lt">J</span></div><div><div class="nick">체계적인 관리자</div><div class="one">일을 조직하고 사람들을 이끌어 목표를 이루는 사람</div>
+<div class="pairtag">기질 ST · 사실·논리로 정확하게</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>계획과 규칙대로 일을 처리해요</li><li>결정이 빠르고 추진력이 있어요</li><li>책임감이 강해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>조직력과 리더십</li><li>실행력</li><li>현실적인 판단</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>다른 방식도 열린 마음으로 들어 보기</li><li>친구들의 감정 살피기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">경영·관리</span><span class="fd">행정·공공</span><span class="fd">금융</span><span class="fd">군·경찰</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">기업 관리자</span><span class="jb">행정 공무원</span><span class="jb">은행원·금융 관리자</span><span class="jb">군 장교</span><span class="jb">경찰 간부</span><span class="jb">프로젝트 매니저</span><span class="jb">회계 관리자</span><span class="jb">학교 행정직</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">경영학</span><span class="mj">행정학</span><span class="mj">경제학</span><span class="mj">경찰행정학</span><span class="mj">회계학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>R(현실형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ESFJ" data-t="ESFJ" style="--c:#5e9e6b">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">S</span><span class="lt">F</span><span class="lt">J</span></div><div><div class="nick">친절한 협력가</div><div class="one">모두가 함께 잘 지내도록 챙기는 사람</div>
+<div class="pairtag">기질 SF · 사람을 실제로 돕는 일</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>다른 사람을 돕는 데서 보람을 느껴요</li><li>분위기와 관계를 중요하게 여겨요</li><li>맡은 일을 성실하게 해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>협동심과 친화력</li><li>배려와 책임감</li><li>꼼꼼한 실무 능력</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>다른 사람의 평가에 너무 흔들리지 않기</li><li>나 자신도 챙기기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">교육</span><span class="fd">보건의료</span><span class="fd">사회복지</span><span class="fd">서비스·고객관리</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">교사</span><span class="jb">간호사</span><span class="jb">사회복지사</span><span class="jb">영양사</span><span class="jb">호텔·서비스 매니저</span><span class="jb">인사·총무 담당자</span><span class="jb">치과위생사</span><span class="jb">보육교사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">교육학</span><span class="mj">간호학</span><span class="mj">사회복지학</span><span class="mj">호텔경영학</span><span class="mj">식품영양학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·C(관습형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ENFJ" data-t="ENFJ" style="--c:#c2708f">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">N</span><span class="lt">F</span><span class="lt">J</span></div><div><div class="nick">사람을 이끄는 멘토</div><div class="one">다른 사람의 성장을 돕고 함께 나아가는 사람</div>
+<div class="pairtag">기질 NF · 사람의 가능성과 성장</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>사람들의 장점을 잘 발견해요</li><li>말로 사람을 움직이는 힘이 있어요</li><li>함께하는 목표를 중요하게 여겨요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>소통과 설득력</li><li>리더십</li><li>공감 능력</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>모든 사람을 만족시키려 하지 않기</li><li>내 감정과 휴식도 챙기기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">교육</span><span class="fd">상담</span><span class="fd">홍보·커뮤니케이션</span><span class="fd">비영리·종교</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">교사</span><span class="jb">교수</span><span class="jb">상담사</span><span class="jb">인사(HR) 담당자</span><span class="jb">홍보 전문가</span><span class="jb">아나운서·진행자</span><span class="jb">사회복지기관 운영자</span><span class="jb">성직자</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">교육학</span><span class="mj">상담심리학</span><span class="mj">광고홍보학</span><span class="mj">신문방송학</span><span class="mj">사회복지학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>S(사회형)·A(예술형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article><article class="card" id="t-ENTJ" data-t="ENTJ" style="--c:#8c78c0">
+<div class="ch"><div class="code"><span class="lt">E</span><span class="lt">N</span><span class="lt">T</span><span class="lt">J</span></div><div><div class="nick">목표를 이끄는 리더</div><div class="one">큰 목표를 세우고 사람과 자원을 모아 이루는 사람</div>
+<div class="pairtag">기질 NT · 원리와 아이디어 탐구</div></div></div>
+<div class="cg">
+<section><h4>😊 이런 특징이 있어요</h4><ul><li>목표가 분명하고 추진력이 강해요</li><li>논리적으로 판단하고 결정해요</li><li>앞장서서 이끄는 것을 좋아해요</li></ul></section>
+<section><h4>💪 나의 강점</h4><ul><li>전략적 사고</li><li>리더십과 결단력</li><li>효율적인 조직 운영</li></ul></section>
+<section><h4>🌱 성장 포인트</h4><ul><li>다른 사람의 속도와 감정 존중하기</li><li>결정 전에 충분히 듣기</li></ul></section>
+</div>
+<div class="jobs"><h4>🧭 이런 분야에서 많이 일해요</h4><div><span class="fd">경영·관리</span><span class="fd">법</span><span class="fd">금융·투자</span><span class="fd">컨설팅</span></div>
+<h4>💼 직업 예시</h4><div><span class="jb">경영자</span><span class="jb">경영 컨설턴트</span><span class="jb">변호사</span><span class="jb">투자 분석가</span><span class="jb">프로젝트 매니저</span><span class="jb">공공기관 관리자</span><span class="jb">대학교수</span><span class="jb">판사·검사</span></div>
+<h4>🎓 관련 학과 예시</h4><div><span class="mj">경영학</span><span class="mj">법학</span><span class="mj">경제학</span><span class="mj">금융·재무</span><span class="mj">정치외교학</span></div>
+<p class="hint">👉 홀랜드 흥미검사에서는 <b>I(탐구형)·E(진취형)</b>과 함께 살펴보면 좋아요. 직업 예시는 같은 유형이 많이 일하거나 만족한다고 보고된 분야를 한국 직업명으로 정리한 것이에요. <b>모든 유형은 모든 직업에서 일할 수 있어요.</b></p></div>
+</article></div></section>
+
+<section class="sec" id="pairs"><h2><span class="no">04</span>가운데 두 글자(기질)로 보는 진로 방향</h2>
+<p class="lead">연구에 따르면 직업 선택과 가장 관련이 큰 것은 <b>가운데 두 글자(ST·SF·NT·NF)</b>예요. 가운데 두 글자가 같은 사람들은 하는 직업이 많이 겹치고, 정반대인 사람들은 거의 겹치지 않았어요(Hammer &amp; Macdaid, 1992).</p>
+<div class="prs"><div class="pr" style="--c:#4f6fa8"><div class="pc">ST</div><b>사실·논리로 정확하게</b><p>실제 자료와 사실을 바탕으로 논리적으로 판단해요. 눈에 보이는 결과를 정확하게 만드는 일을 좋아해요.</p>
+<div class="pf"><span>주요 분야</span>경영·회계·금융, 행정·법, 공학·기술, 안전·수사</div><div class="pf"><span>홀랜드 연결</span>R(현실형)·C(관습형)</div>
+<div class="pt"><button class="mini" data-t="ISTJ">ISTJ</button> <button class="mini" data-t="ISTP">ISTP</button> <button class="mini" data-t="ESTP">ESTP</button> <button class="mini" data-t="ESTJ">ESTJ</button></div></div><div class="pr" style="--c:#5e9e6b"><div class="pc">SF</div><b>사람을 실제로 돕는 일</b><p>지금 눈앞의 사람에게 실질적인 도움을 주는 데서 보람을 느껴요. 따뜻하고 꼼꼼하게 챙겨요.</p>
+<div class="pf"><span>주요 분야</span>보건의료, 교육·보육, 사회복지, 서비스</div><div class="pf"><span>홀랜드 연결</span>S(사회형)·C(관습형)</div>
+<div class="pt"><button class="mini" data-t="ISFJ">ISFJ</button> <button class="mini" data-t="ISFP">ISFP</button> <button class="mini" data-t="ESFP">ESFP</button> <button class="mini" data-t="ESFJ">ESFJ</button></div></div><div class="pr" style="--c:#c2708f"><div class="pc">NF</div><b>사람의 가능성과 성장</b><p>사람의 마음과 의미, 가능성에 관심이 많아요. 다른 사람이 성장하도록 돕고 표현하는 일을 좋아해요.</p>
+<div class="pf"><span>주요 분야</span>상담·심리, 교육, 글쓰기·예술, 미디어·홍보</div><div class="pf"><span>홀랜드 연결</span>S(사회형)·A(예술형)</div>
+<div class="pt"><button class="mini" data-t="INFJ">INFJ</button> <button class="mini" data-t="INFP">INFP</button> <button class="mini" data-t="ENFP">ENFP</button> <button class="mini" data-t="ENFJ">ENFJ</button></div></div><div class="pr" style="--c:#8c78c0"><div class="pc">NT</div><b>원리와 아이디어 탐구</b><p>&quot;왜?&quot;를 끝까지 파고들고 새로운 원리와 전략을 세우는 일을 좋아해요. 지적인 도전에서 에너지를 얻어요.</p>
+<div class="pf"><span>주요 분야</span>과학·연구, IT·공학, 경영전략·컨설팅, 법·정책</div><div class="pf"><span>홀랜드 연결</span>I(탐구형)·E(진취형)</div>
+<div class="pt"><button class="mini" data-t="INTJ">INTJ</button> <button class="mini" data-t="INTP">INTP</button> <button class="mini" data-t="ENTP">ENTP</button> <button class="mini" data-t="ENTJ">ENTJ</button></div></div></div>
+<div class="research">📊 <b>홀랜드 흥미검사와 함께 보기</b> · MBTI의 E·N 지표는 성격 5요인의 <b>외향성·개방성</b>과 관련이 있고(McCrae &amp; Costa, 1989), 외향성은 홀랜드의 <b>진취형(E)</b>, 개방성은 <b>예술형(A)·탐구형(I)</b>과 관련이 있다는 메타분석 결과가 있어요(Barrick et al., 2003). 리소스북 <a href="1-1%20%ED%99%80%EB%9E%9C%EB%93%9C_%ED%9D%A5%EB%AF%B8%EC%9C%A0%ED%98%95_%EC%A7%81%EC%97%85%EC%95%88%EB%82%B4.html"><b>1-1 홀랜드 흥미유형</b></a>과 비교해 보세요.</div></section>
+
+<section class="sec" id="care"><h2><span class="no">05</span>MBTI, 이것만은 꼭 알아 두세요</h2>
+<p class="lead">MBTI는 인기가 많은 만큼 <b>학계에서 한계도 많이 지적</b>되고 있어요. 결과를 똑똑하게 쓰려면 아래 내용을 알아 두세요.</p>
+<div class="warn">
+<div><b>🔄 결과가 바뀔 수 있어요</b>짧은 기간(5주)만에 다시 검사했을 때 <b>절반 가까이가 다른 유형</b>으로 나왔다는 연구가 있어요(Pittenger, 1993). 특히 점수가 중간에 가까운 지표는 쉽게 바뀌어요. 반면 지표별 점수 자체의 신뢰도는 대체로 양호하다는 분석도 있어요(Capraro &amp; Capraro, 2002).</div>
+<div><b>📏 딱 둘로 나뉘지 않아요</b>연구에서는 사람들이 E 아니면 I처럼 두 무리로 나뉘기보다 <b>연속된 정도의 차이</b>를 보였어요(McCrae &amp; Costa, 1989). "나는 약간 E 쪽"처럼 생각하는 게 더 정확해요.</div>
+<div><b>🚫 잘할 일을 예측하지 않아요</b>MBTI는 <b>선호</b>를 알려 줄 뿐 <b>능력이나 성공</b>을 예측하지 않아요. 그래서 MBTI 공식 기관도 채용·선발에 쓰는 것은 <b>비윤리적</b>이라고 밝히고 있어요(Myers &amp; Briggs Foundation).</div>
+<div><b>🌐 무료 검사는 다른 검사예요</b>16Personalities는 성격 5요인을 바탕으로 만들었고 <b>-A/-T(자기확신)</b>라는 다섯 번째 지표가 있어요(16Personalities, n.d.). 정식 MBTI는 한국에서 어세스타(한국MBTI연구소)가 공급해요.</div>
+<div class="ok"><b>✅ 이렇게 쓰면 좋아요</b>① 나를 설명하는 <b>여러 단서 중 하나</b>로 쓰기 ② 흥미(홀랜드)·적성·가치관 검사와 <b>함께</b> 보기 ③ 유형 설명 중 <b>맞는 것과 안 맞는 것</b>을 직접 골라 보기 ④ "그래서 나는 ○○밖에 못 해"가 아니라 <b>"이런 방식이 편하구나"</b>로 이해하기</div>
+<div class="ok"><b>✅ 모든 유형은 모든 직업에 있어요</b>어떤 유형이 특정 직업에 더 <b>많이</b> 있을 뿐, 그 직업을 <b>못 하는</b> 유형은 없어요. 선호가 직업 선택을 제한해서는 안 돼요(Myers &amp; Briggs Foundation).</div>
+</div></section>
+
+<section class="sec" id="act"><h2><span class="no">06</span>상담 시간에 함께 해 보기</h2>
+<p class="lead">학생이 직접 생각해 보고 적어 보는 질문이에요. 결과를 "확인"하는 것보다 <b>나를 설명해 보는 과정</b>이 더 중요해요.</p>
+<ol class="act">
+<li>내 유형 설명에서 <b>"딱 나다!"</b> 싶은 문장 2개와 <b>"이건 아닌데?"</b> 싶은 문장 1개를 골라 보세요.<small>안 맞는 부분이 많으면 다른 글자 하나를 바꿔 비슷한 유형도 읽어 보세요.</small></li>
+<li>4개 지표 중 <b>가장 확실한 것</b>과 <b>가장 애매한 것</b>은 무엇인가요?<small>애매한 지표는 상황에 따라 양쪽을 다 쓰는 것일 수 있어요.</small></li>
+<li>내 강점이 가장 잘 드러났던 <b>학교 활동 경험</b>(수업·동아리·봉사)을 하나 떠올려 보세요.<small>학생부 활동이나 자기소개를 준비할 때도 도움이 돼요.</small></li>
+<li>직업 예시 중 <b>관심 가는 직업 1개</b>와 <b>전혀 생각 안 해 본 직업 1개</b>를 골라 커리어넷(career.go.kr)에서 찾아보세요.</li>
+<li>홀랜드 흥미검사 결과와 비교해 보면 <b>같은 방향</b>인가요, <b>다른 방향</b>인가요?<small>다르다면 "좋아하는 것(흥미)"과 "편한 방식(성격)"이 어떻게 다른지 이야기해 보세요.</small></li>
+<li>성장 포인트 중 이번 학기에 <b>연습해 보고 싶은 것</b> 한 가지를 정해 보세요.</li>
+</ol>
+<div class="teacher">👩‍🏫 <b>교사용 팁</b> · 학생이 무료 검사 결과를 가져오면 정식 검사와 다를 수 있음을 알려 주세요. 유형으로 학생을 규정하거나 진로를 결정하지 말고, 학생 스스로 설명을 고르게 하는 <b>"베스트 핏(best-fit) 확인"</b> 과정을 거치는 것이 MBTI 해석의 기본이에요(Myers et al., 1998). 진로 결정은 흥미·적성·가치관·학업 성취를 함께 고려하세요.</div></section>
+
+<section class="sec src" id="src"><h2><span class="no">출처</span>참고문헌</h2>
+<p class="lead">직업 예시는 Hammer(2020)·Hammer &amp; Macdaid(1992)의 유형별 직업 경향 자료를 바탕으로 한국 직업명·학과명으로 다시 정리했어요. 유형 별칭과 학교생활 예시, 활동 질문은 이 자료에서 학생 이해를 돕기 위해 새로 만든 것이에요.</p>
+<ol><li>Myers, I. B., McCaulley, M. H., Quenk, N. L., & Hammer, A. L. (1998). <i>MBTI manual: A guide to the development and use of the Myers-Briggs Type Indicator</i> (3rd ed.). Consulting Psychologists Press.</li><li>Hammer, A. L. (2020). <i>Introduction to Type® and Careers</i> (2nd ed.). The Myers-Briggs Company.</li><li>Hammer, A. L., & Macdaid, G. P. (1992). <i>MBTI Career Report manual</i>. Consulting Psychologists Press.</li><li>The Myers &amp; Briggs Foundation. (n.d.). <i>Personality type and careers</i>. https://www.myersbriggs.org/type-in-my-life/personality-type-and-careers/</li><li>McCrae, R. R., &amp; Costa, P. T., Jr. (1989). Reinterpreting the Myers-Briggs Type Indicator from the perspective of the five-factor model of personality. <i>Journal of Personality, 57</i>(1), 17–40. https://doi.org/10.1111/j.1467-6494.1989.tb00759.x</li><li>Pittenger, D. J. (1993). The utility of the Myers-Briggs Type Indicator. <i>Review of Educational Research, 63</i>(4), 467–488.</li><li>Pittenger, D. J. (2005). Cautionary comments regarding the Myers-Briggs Type Indicator. <i>Consulting Psychology Journal: Practice and Research, 57</i>(3), 210–221.</li><li>Capraro, R. M., &amp; Capraro, M. M. (2002). Myers-Briggs Type Indicator score reliability across studies: A meta-analytic reliability generalization study. <i>Educational and Psychological Measurement, 62</i>(4).</li><li>Barrick, M. R., Mount, M. K., &amp; Gupta, R. (2003). Meta-analysis of the relationship between the five-factor model of personality and Holland's occupational types. <i>Personnel Psychology, 56</i>(1), 45–74.</li><li>The Myers &amp; Briggs Foundation. (n.d.). <i>Ethical use of the MBTI® instrument</i>. https://www.myersbriggs.org/</li><li>Schaubhut, N. A., &amp; Thompson, R. C. (2011). <i>Technical brief for the MBTI® Form M and Form Q assessments—Korean</i>. CPP.</li><li>김정택·심혜숙·제석봉 (1995). <i>MBTI 개발과 활용</i>. 한국심리검사연구소. (한국판 MBTI는 1990년 처음 소개)</li><li>16Personalities. (n.d.). <i>MBTI vs. 16Personalities: What’s the difference?</i> https://www.16personalities.com/articles/mbti-vs-16personalities-whats-the-difference</li><li>윤병선 외 (2020). MBTI 성격유형 및 특성에 따른 창직가정신에 관한 연구. <i>취업진로연구, 10</i>(1).</li></ol></section>
+</main>
+<nav class="tabs"><a class="index" href="index.html">INDEX</a><a href="#about">MBTI란?</a><a href="#dims">4가지 선호</a><a href="#types">16유형</a><a href="#pairs">기질별 진로</a><a href="#care">주의점</a><a href="#act">상담 활동</a><a href="1-1%20%ED%99%80%EB%9E%9C%EB%93%9C_%ED%9D%A5%EB%AF%B8%EC%9C%A0%ED%98%95_%EC%A7%81%EC%97%85%EC%95%88%EB%82%B4.html">1-1 홀랜드</a></nav>
+<script>
+const cards=[...document.querySelectorAll('.card')],cells=[...document.querySelectorAll('.tc')],box=document.querySelector('.cards');
+function pick(t,scroll){box.classList.remove('allon');cards.forEach(c=>c.classList.toggle('show',c.dataset.t==t));cells.forEach(c=>c.classList.toggle('sel',c.dataset.t==t));
+ document.querySelectorAll('.sw').forEach((s,i)=>s.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v==t[i])));
+ history.replaceState(null,'','#'+t);if(scroll)document.getElementById('t-'+t).scrollIntoView({behavior:'smooth',block:'start'})}
+cells.forEach(c=>c.onclick=()=>pick(c.dataset.t,true));
+document.querySelectorAll('.mini').forEach(b=>b.onclick=()=>{location.hash='types';setTimeout(()=>pick(b.dataset.t,true),30)});
+document.querySelectorAll('.sw').forEach(s=>s.querySelectorAll('button').forEach(b=>b.onclick=()=>{s.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x==b))}));
+document.querySelector('.go').onclick=()=>{const t=[...document.querySelectorAll('.sw')].map(s=>s.querySelector('.on').dataset.v).join('');pick(t,true)};
+document.querySelector('.toggle').onclick=e=>{const on=box.classList.toggle('allon');e.target.textContent=on?'선택한 유형만 보기':'16유형 모두 펼치기'};
+const h=location.hash.slice(1).toUpperCase();pick(/^[EI][SN][TF][JP]$/.test(h)?h:'ISTJ',false);
+</script></body></html>
