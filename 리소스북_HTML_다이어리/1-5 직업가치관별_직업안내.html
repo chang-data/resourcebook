@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>직업가치관별 직업 안내</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
+<style>:root{--theme:#c2708f;--theme-soft:#ecd3d8;--theme-pale:#f5e7e7;--theme-deep:#8e586f}
+:root{--cream:#f7f1e8;--paper:#fffdf9;--ink:#3b3a40;--line:#e6ddd0;--muted:#8a8580;
+--sans:'Noto Sans KR','Malgun Gothic','맑은 고딕',sans-serif;--serif:'Noto Serif KR','Nanum Myeongjo',serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;height:6px;background:linear-gradient(90deg,var(--theme) 0 78%,var(--theme-soft) 78% 100%)}
+.head{max-width:1280px;margin:0 auto;padding:34px 28px 10px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.eyebrow{font-size:11px;letter-spacing:.32em;color:var(--muted);font-weight:700;text-transform:uppercase}
+.head h1{font-family:var(--serif);font-weight:900;font-size:clamp(26px,3.4vw,42px);line-height:1.15;margin:6px 0 0;color:var(--ink)}
+.head h1 .num{color:var(--theme);margin-right:.25em}
+.head .meta{font-size:12px;color:var(--muted)}
+.dots{display:flex;gap:7px;margin-top:12px}.dots i{width:9px;height:9px;border-radius:50%;display:block}
+.tabs{position:sticky;bottom:0;z-index:20;background:rgba(247,241,232,.94);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.tabs a,.tabs button{flex:0 0 auto;border:0;cursor:pointer;font:700 12px var(--sans);text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;color:var(--ink);background:var(--paper)}
+.tabs .index{background:var(--ink);color:#fff;letter-spacing:.18em;font-size:11px}
+.tabs .on{color:#fff!important}
+.foot{max-width:1280px;margin:0 auto;padding:20px 28px 30px;font-size:11px;color:var(--muted)}
+@media print{.tabs,.topbar{display:none}}
+
+.wrap{max-width:1180px;margin:0 auto;padding:6px 28px 90px}
+.notice{background:#fbeeee;border-bottom:1px solid #edd3d3}
+.notice .in{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;gap:12px;align-items:center;font-size:14px;line-height:1.65;color:#6e2e3a}
+.notice .ic{flex:0 0 26px;height:26px;border-radius:50%;background:#b0485a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
+.nav a{font:700 13px var(--sans);text-decoration:none;background:var(--paper);border:1px solid #e6ddd0;border-radius:20px;padding:7px 14px}
+.nav a:hover{background:var(--theme-pale)}
+.sec{background:var(--paper);border:1px solid #ebe2d5;border-radius:22px;padding:24px 26px;margin:0 0 18px;box-shadow:0 10px 30px -24px rgba(59,58,64,.5);scroll-margin-top:20px}
+.sec>h2{font-family:var(--serif);font-size:24px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.sec>h2 .no{font:800 12px var(--sans);color:#fff;background:var(--theme);border-radius:6px;padding:4px 9px;letter-spacing:.1em}
+.sec>.lead{margin:4px 0 16px;color:#5b5960;font-size:15px;line-height:1.75}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.kp>div{background:var(--theme-pale);border-radius:14px;padding:14px 16px;font-size:14px;line-height:1.7}
+.kp>div>b:first-child{display:block;font-size:15.5px;margin-bottom:3px;color:var(--theme-deep)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 12px}
+.trio div{border-radius:14px;padding:14px;text-align:center;background:#fff;border:1px solid #ece3d7}
+.trio .big{font:900 22px var(--serif);display:block;margin-bottom:4px}
+.trio p{margin:4px 0 0;font-size:13.5px;line-height:1.6;color:#5b5960}
+.trio div.on{border:2px solid var(--theme);background:#fdf4f7}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.qd{text-decoration:none;color:var(--ink);background:color-mix(in srgb,var(--c) 12%,#fff);border-top:5px solid var(--c);border-radius:14px;padding:12px 14px}
+.qd b{display:block;font:900 17px var(--serif);margin-bottom:3px}.qd span{font-size:13px;color:#5b5960}
+.picker{background:#fbf3f5;border:1px dashed #e6c2cf;border-radius:16px;padding:16px}
+.picker .lab{font:800 14.5px var(--sans);color:var(--theme-deep);margin-bottom:8px}
+.picker .lab small{font-weight:600;color:#8a7a80}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1.5px solid var(--c);background:#fff;color:var(--ink);font:700 13.5px var(--sans);padding:8px 12px;border-radius:20px;cursor:pointer}
+.chip.on{background:var(--c);color:#fff}
+.chip .rk{display:inline-block;background:#fff;color:var(--c);border-radius:50%;width:18px;height:18px;font-size:11px;line-height:18px;text-align:center;margin-right:4px}
+.reset{border:0;background:var(--ink);color:#fff;font:800 12.5px var(--sans);padding:8px 14px;border-radius:10px;cursor:pointer;margin-left:6px}
+#result{margin-top:14px}
+.empty{color:#8a7a80;font-size:14px;padding:6px 2px}
+.rbox{background:#fff;border:1px solid #ece3d7;border-radius:14px;padding:14px 16px;margin-bottom:10px}
+.rbox h4{margin:0 0 10px;font-size:15px}
+.bars{display:grid;gap:7px}
+.bar{display:grid;grid-template-columns:110px 1fr 40px;gap:8px;align-items:center;font:700 13.5px var(--sans)}
+.bar .tr{height:14px;background:#f2ece4;border-radius:8px;overflow:hidden}
+.bar .fl{height:100%;background:var(--c);border-radius:8px}
+.cf{background:#fff8ea;border:1px solid #f0e0b8;border-radius:12px;padding:10px 12px;margin-top:8px;font-size:14px;line-height:1.65}
+.cf b{color:#8a5a12}
+.tblock{border:2px solid var(--c);border-radius:22px;padding:20px 22px;background:#fff;margin-top:16px;scroll-margin-top:16px}
+.th{display:flex;gap:14px;align-items:center}
+.ti{flex:0 0 58px;height:58px;border-radius:16px;background:var(--c);display:flex;align-items:center;justify-content:center;font-size:30px}
+.th h3{margin:0;font:900 23px var(--serif)}
+.tv{margin-top:5px}
+.vchip{display:inline-block;margin:0 6px 4px 0;background:var(--c);color:#fff;font:700 12.5px var(--sans);border-radius:14px;padding:3px 10px}
+.tdesc{font-size:15px;line-height:1.7;margin:10px 0 12px;color:#4b4a50}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.vc{background:color-mix(in srgb,var(--c) 7%,#fff);border-radius:16px;padding:14px 15px;scroll-margin-top:16px}
+.vh{display:flex;gap:10px;align-items:center}
+.vi{font-size:26px}.vh h3{margin:0;font:900 18px var(--serif)}
+.vt{font:800 11px var(--sans);color:var(--c)}
+.vd{font-size:14px;font-weight:700;margin:8px 0;line-height:1.55}
+.vr{font-size:13.5px;line-height:1.6;margin-top:6px}
+.vr span{display:block;font:800 11.5px var(--sans);color:color-mix(in srgb,var(--c) 75%,#000)}
+.vr.q{background:#fff;border-radius:10px;padding:7px 9px}
+.tj{margin-top:12px}.tj h4{margin:0 0 6px;font-size:14.5px}
+.tj h4 small{font:700 11px var(--sans);color:#fff;background:var(--c);border-radius:5px;padding:2px 6px;margin-left:4px}
+.jb{display:inline-block;margin:2px 6px 4px 0;border-radius:20px;padding:4px 11px;font-size:13.5px;font-weight:600;background:color-mix(in srgb,var(--c,#c2708f) 13%,#fff);border:1px solid color-mix(in srgb,var(--c,#c2708f) 32%,#fff)}
+.same{width:100%;border-collapse:separate;border-spacing:6px;font-size:14px}
+.same th{font:800 13.5px var(--sans);text-align:left}
+.same thead th{background:var(--c);color:#fff;border-radius:10px;padding:8px 10px}
+.same thead th:first-child{background:none}
+.same tbody th{font:900 16px var(--serif);white-space:nowrap;padding-right:6px}
+.same td{background:color-mix(in srgb,var(--c) 10%,#fff);border-radius:10px;padding:9px 11px;line-height:1.55}
+.research{margin-top:12px;background:#f6f2fb;border-radius:12px;padding:12px 16px;font-size:14px;line-height:1.7}
+.warn{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
+.warn>div{border-radius:14px;padding:14px 16px;font-size:14px;line-height:1.7;background:#fff8ea;border:1px solid #f0e0b8}
+.warn>div>b:first-child{display:block;font-size:15.5px;margin-bottom:4px;color:#8a5a12}
+.warn>div.ok{background:#eef6f0;border-color:#cfe5d5}.warn>div.ok>b:first-child{color:#2f7462}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.steps div{background:#fbf7f1;border-radius:14px;padding:14px;font-size:14px;line-height:1.65}
+.steps b:first-of-type{display:block;font:900 15px var(--serif);color:var(--theme-deep);margin-bottom:4px}
+.steps span.n{font:800 11px var(--sans);color:#fff;background:var(--theme);border-radius:5px;padding:2px 7px;margin-bottom:6px;display:inline-block}
+.act{counter-reset:q;padding:0;margin:14px 0 0}
+.act li{list-style:none;position:relative;padding:10px 12px 10px 46px;margin:0 0 8px;background:#fbf7f1;border-radius:12px;font-size:14.5px;line-height:1.7}
+.act li:before{counter-increment:q;content:counter(q);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--theme);color:#fff;font:800 13px var(--sans);display:flex;align-items:center;justify-content:center}
+.act small{display:block;color:#8a6a2a;font-size:12.5px}
+.teacher{margin-top:12px;background:var(--theme-pale);border-radius:12px;padding:12px 16px;font-size:14px;line-height:1.75}
+.src ol{margin:0;padding-left:20px;font-size:13px;line-height:1.75;color:#4b4a50}
+.src li{margin-bottom:4px;word-break:break-all}
+@media (max-width:760px){.wrap{padding:6px 12px 80px}.vgrid,.trio{grid-template-columns:1fr}.quad,.steps{grid-template-columns:1fr 1fr}.same,.same tbody,.same tr,.same th,.same td{display:block}.same thead{display:none}.sec{padding:18px 16px}}
+@media print{.picker,.nav{display:none}.tblock{break-inside:avoid}}
+</style></head>
+<body><div class="topbar"></div>
+<header class="head"><div><div class="eyebrow">RESOURCE BOOK · 1-5 · WORK VALUES &amp; CAREERS</div>
+<h1><span class="num">1-5</span>직업가치관별 직업 안내</h1><div class="dots"><i style="background:#b0485a"></i><i style="background:#4f6fa8"></i><i style="background:#c2708f"></i><i style="background:#e08a6d"></i><i style="background:#e28fae"></i><i style="background:#5e9e6b"></i><i style="background:#3e9c9e"></i><i style="background:#3a86c2"></i><i style="background:#e7963a"></i><i style="background:#8c78c0"></i><i style="background:#cf6a3a"></i><i style="background:#9a6e50"></i><i style="background:#2f7462"></i></div></div>
+<div class="meta">12가치 · 4유형 · 학생 상담용 · 출처 10건</div></header>
+<div class="notice" role="note"><div class="in"><span class="ic">!</span><div><b>먼저 읽어 주세요</b> · 직업가치관에는 <b>정답도, 좋고 나쁨도 없어요</b>. "어떤 직업이 좋은가"가 아니라 <b>"나는 일에서 무엇을 얻고 싶은가"</b>를 알아보는 검사예요. 가치관은 경험하면서 <b>달라질 수 있어요</b>.</div></div></div>
+<main class="wrap">
+<nav class="nav"><a href="#about">① 직업가치관이란?</a><a href="#find">② 내 가치로 직업 찾기</a><a href="#types">③ 4가지 유형 · 12가지 가치</a><a href="#same">④ 같은 직업, 다른 가치</a><a href="#care">⑤ 결과를 똑똑하게 보는 법</a><a href="#act">⑥ 상담 활동</a><a href="#src">출처</a></nav>
+
+<section class="sec" id="about"><h2><span class="no">01</span>직업가치관, 무엇일까?</h2>
+<p class="lead"><b>직업가치관</b>은 내가 가진 가치가 <b>일이나 조직생활에 적용된 것</b>, 즉 직업을 고를 때 <b>무엇을 중요하게 여기는가</b>예요(커리어넷, n.d.). 이 페이지는 <b>커리어넷 직업가치관검사(중·고등학생용, 49문항)</b>의 12가지 가치와 4가지 가치지향 유형을 기준으로 정리했어요.</p>
+<div class="trio">
+<div><span class="big">💗 흥미</span>무엇을 <b>좋아하나요?</b><p>홀랜드 흥미검사 → 1-1·1-2</p></div>
+<div><span class="big">💪 적성</span>무엇을 <b>잘하나요?</b><p>직업적성검사 → 1-4</p></div>
+<div class="on"><span class="big">⭐ 가치관</span>무엇이 <b>중요한가요?</b><p>직업가치관검사 → 이 페이지</p></div>
+</div>
+<div class="kp">
+<div><b>😊 가치가 맞으면 만족해요</b>일이 주는 보상이 내가 원하는 가치와 맞을수록 <b>직업 만족도</b>가 높아진다는 것이 직업적응이론의 핵심이에요(Dawis &amp; Lofquist, 1984; Kalleberg, 1977).</div>
+<div><b>🏢 직업뿐 아니라 직장도</b>개인과 조직의 가치가 잘 맞을수록 <b>직무 만족·조직 몰입</b>이 높고 <b>이직 의도</b>는 낮다는 메타분석 결과가 있어요(Kristof-Brown et al., 2005).</div>
+<div><b>🧭 선택의 기준이 돼요</b>가치관은 여러 선택지 중 <b>무엇을 고를지 정하는 기준</b>으로 작용해, 진로 선택과 만족·성공에 영향을 준다고 설명해요(Brown, 2002; Super, 1970).</div>
+<div><b>🌱 청소년기엔 아직 자라는 중</b>직장 경험이 없는 청소년은 직업가치가 아직 <b>뚜렷하게 형성되지 않았을</b> 수 있어요(커리어넷, n.d.). 그래서 결과를 "확정"이 아니라 <b>"지금의 나"</b>로 읽어요.</div>
+</div>
+<div class="quad"><a href="#t-S" class="qd" style="--c:#4f8fa8"><b>🏠 안정지향형</b><span>안정성 · 보수 · 일과 삶의 균형</span></a><a href="#t-M" class="qd" style="--c:#d46a7e"><b>💗 의미지향형</b><span>즐거움 · 소속감 · 자기 계발</span></a><a href="#t-C" class="qd" style="--c:#e0a23c"><b>🚀 변화지향형</b><span>도전성 · 영향력 · 사회적 기여</span></a><a href="#t-A" class="qd" style="--c:#8c78c0"><b>🏆 성취지향형</b><span>성취 · 사회적 인정 · 자율성</span></a></div></section>
+
+<section class="sec" id="find"><h2><span class="no">02</span>내 가치로 직업 찾기</h2>
+<p class="lead">검사 결과지의 <b>"내가 중요하게 생각하는 직업가치관 1~3위"</b>를 순서대로 골라 보세요. 4가지 유형 중 어디에 가까운지, 관련 직업은 무엇인지, <b>함께 채우기 어려운 가치</b>는 없는지 보여 줘요.</p>
+<div class="picker"><div class="lab">⭐ 내가 중요하게 생각하는 가치 <small>(다시 누르면 취소 · 4번째를 누르면 1순위가 빠져요)</small><button class="reset">초기화</button></div>
+<div class="chips"><button class="chip" data-k="stab" style="--c:#4f8fa8">🛡️ 안정성</button><button class="chip" data-k="pay" style="--c:#4f8fa8">💰 보수</button><button class="chip" data-k="wlb" style="--c:#4f8fa8">⚖️ 일과 삶의 균형</button><button class="chip" data-k="fun" style="--c:#d46a7e">😊 즐거움</button><button class="chip" data-k="belong" style="--c:#d46a7e">🤝 소속감</button><button class="chip" data-k="grow" style="--c:#d46a7e">📈 자기 계발</button><button class="chip" data-k="chal" style="--c:#e0a23c">🧗 도전성</button><button class="chip" data-k="infl" style="--c:#e0a23c">📣 영향력</button><button class="chip" data-k="contr" style="--c:#e0a23c">🌍 사회적 기여</button><button class="chip" data-k="achv" style="--c:#8c78c0">🎯 성취</button><button class="chip" data-k="recog" style="--c:#8c78c0">🏅 사회적 인정</button><button class="chip" data-k="auto" style="--c:#8c78c0">🕊️ 자율성</button></div><div id="result"></div></div>
+<div class="research">📊 <b>왜 "충돌"을 보나요?</b> · 사람의 가치들은 원 모양으로 배열되어, 가까운 가치는 함께 추구하기 쉽고 <b>반대편 가치는 서로 긴장 관계</b>에 있어요. 예를 들어 <b>안정을 지키려는 가치</b>와 <b>변화에 열려 있는 가치</b>, <b>나를 높이는 가치</b>와 <b>남을 위하는 가치</b>가 그래요(Schwartz, 1992). 가치 충돌 체크는 이 구조를 바탕으로 이 자료에서 구성한 것이에요.</div></section>
+
+<section class="sec" id="types"><h2><span class="no">03</span>4가지 가치지향 유형과 12가지 가치</h2>
+<p class="lead">커리어넷은 12가지 가치를 비슷한 것끼리 묶어 <b>4가지 가치지향 유형</b>으로 제시해요. 유형 구성과 관련 직업은 커리어넷 결과지를 따랐고, 가치 설명은 학생이 이해하기 쉽게 풀어 썼어요. <b>"직업 조사 질문"</b>은 관심 직업을 알아볼 때 그 가치가 채워지는지 확인하는 질문이에요.</p>
+<div class="tblock" id="t-S" style="--c:#4f8fa8"><div class="th"><span class="ti">🏠</span><div><h3>안정지향형</h3><div class="tv"><span class="vchip">🛡️ 안정성</span><span class="vchip">💰 보수</span><span class="vchip">⚖️ 일과 삶의 균형</span></div></div></div>
+<p class="tdesc">일을 통해 <b>안정적인 생활</b>을 얻고 싶어요. 충분한 보수, 오래 일할 수 있는 환경, 일과 삶의 균형을 중요하게 생각해요.</p>
+<div class="vgrid"><article class="vc" id="v-stab" style="--c:#4f8fa8"><div class="vh"><span class="vi">🛡️</span><div><h3>안정성</h3><span class="vt">안정지향</span></div></div>
+<p class="vd">하고 싶은 일을 오래, 흔들림 없이 계속하는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;정년까지 걱정 없이 일하고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>고용이 안정적이고 갑작스러운 변화가 적은 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 직업은 경기가 나빠도 계속 일할 수 있을까?</div></article><article class="vc" id="v-pay" style="--c:#4f8fa8"><div class="vh"><span class="vi">💰</span><div><h3>보수</h3><span class="vt">안정지향</span></div></div>
+<p class="vd">일한 만큼 돈과 같은 경제적 보상을 얻는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;노력한 만큼 충분히 벌고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>소득 수준이 높거나 성과에 따라 보상이 큰 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 직업의 평균 임금과 임금 상승 폭은 어떨까?</div></article><article class="vc" id="v-wlb" style="--c:#4f8fa8"><div class="vh"><span class="vi">⚖️</span><div><h3>일과 삶의 균형</h3><span class="vt">안정지향</span></div></div>
+<p class="vd">일과 개인 생활 사이의 균형을 지키는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;퇴근 후 내 시간이 꼭 있었으면 해요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>근무 시간이 예측 가능하고 휴식이 보장되는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>야근·주말 근무·교대 근무가 얼마나 있을까?</div></article></div>
+<div class="tj"><h4>💼 관련 직업 예시 <small>커리어넷 결과지 수록 직업 중 일부</small></h4><span class="jb">초등학교교사</span><span class="jb">약사</span><span class="jb">회계사</span><span class="jb">세무사</span><span class="jb">변리사</span><span class="jb">노무사</span><span class="jb">물리치료사</span><span class="jb">방사선사</span><span class="jb">임상병리사</span><span class="jb">사서</span><span class="jb">영양사</span><span class="jb">항공교통관제사</span><span class="jb">항공기정비원</span><span class="jb">철도·지하철기관사</span><span class="jb">자동차정비원</span><span class="jb">치과위생사</span></div></div><div class="tblock" id="t-M" style="--c:#d46a7e"><div class="th"><span class="ti">💗</span><div><h3>의미지향형</h3><div class="tv"><span class="vchip">😊 즐거움</span><span class="vchip">🤝 소속감</span><span class="vchip">📈 자기 계발</span></div></div></div>
+<p class="tdesc">일을 통해 <b>내 삶의 의미</b>를 확인하고 싶어요. 일 자체의 즐거움, 함께하는 소속감, 성장하는 나를 중요하게 생각해요.</p>
+<div class="vgrid"><article class="vc" id="v-fun" style="--c:#d46a7e"><div class="vh"><span class="vi">😊</span><div><h3>즐거움</h3><span class="vt">의미지향</span></div></div>
+<p class="vd">일 자체에서 흥미와 보람, 즐거움을 느끼는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;좋아하는 걸 하면서 살고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>내 흥미 분야와 일의 내용이 맞닿은 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 일의 하루 중 내가 즐길 수 있는 순간은 언제일까?</div></article><article class="vc" id="v-belong" style="--c:#d46a7e"><div class="vh"><span class="vi">🤝</span><div><h3>소속감</h3><span class="vt">의미지향</span></div></div>
+<p class="vd">조직의 구성원이 되어 사람들과 함께 일하는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;좋은 동료들과 한 팀으로 일하고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>팀으로 협력하고 공동체 문화가 있는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>혼자 일하는 시간과 함께 일하는 시간은 어느 정도일까?</div></article><article class="vc" id="v-grow" style="--c:#d46a7e"><div class="vh"><span class="vi">📈</span><div><h3>자기 계발</h3><span class="vt">의미지향</span></div></div>
+<p class="vd">일을 하면서 능력을 키우고 계속 성장하는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;일하면서도 계속 배우고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>새로운 지식과 기술을 계속 익혀야 하는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 직업에서 경력이 쌓이면 어떤 성장 경로가 있을까?</div></article></div>
+<div class="tj"><h4>💼 관련 직업 예시 <small>커리어넷 결과지 수록 직업 중 일부</small></h4><span class="jb">간호사</span><span class="jb">보육교사</span><span class="jb">유치원교사</span><span class="jb">특수교사</span><span class="jb">임상심리사</span><span class="jb">응급구조사</span><span class="jb">작가</span><span class="jb">만화가</span><span class="jb">사진작가</span><span class="jb">음악가</span><span class="jb">웹디자이너</span><span class="jb">학예사(큐레이터)</span><span class="jb">아나운서</span><span class="jb">통역가</span><span class="jb">제과·제빵사</span><span class="jb">스포츠강사</span></div></div><div class="tblock" id="t-C" style="--c:#e0a23c"><div class="th"><span class="ti">🚀</span><div><h3>변화지향형</h3><div class="tv"><span class="vchip">🧗 도전성</span><span class="vchip">📣 영향력</span><span class="vchip">🌍 사회적 기여</span></div></div></div>
+<p class="tdesc">안정보다 <b>내 일로 변화</b>를 만들고 싶어요. 새로운 도전, 사람들에게 미치는 영향, 사회에 대한 기여를 중요하게 생각해요.</p>
+<div class="vgrid"><article class="vc" id="v-chal" style="--c:#e0a23c"><div class="vh"><span class="vi">🧗</span><div><h3>도전성</h3><span class="vt">변화지향</span></div></div>
+<p class="vd">실패를 두려워하지 않고 새로운 일에 도전하는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;매일 똑같은 일은 지루할 것 같아요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>변화가 많고 새로운 문제를 계속 만나는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 일은 얼마나 자주 새로운 상황을 마주할까?</div></article><article class="vc" id="v-infl" style="--c:#e0a23c"><div class="vh"><span class="vi">📣</span><div><h3>영향력</h3><span class="vt">변화지향</span></div></div>
+<p class="vd">다른 사람에게 영향을 주고 사람들을 이끄는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;내 생각으로 사람들을 움직이고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>결정권이 있거나 많은 사람에게 메시지를 전하는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 직업은 누구에게, 얼마나 큰 영향을 미칠까?</div></article><article class="vc" id="v-contr" style="--c:#e0a23c"><div class="vh"><span class="vi">🌍</span><div><h3>사회적 기여</h3><span class="vt">변화지향</span></div></div>
+<p class="vd">다른 사람과 공동체의 행복과 복지에 기여하는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;세상에 도움이 되는 일을 하고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>사람을 돕거나 사회 문제를 해결하는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 일 덕분에 누가, 어떻게 더 나아질까?</div></article></div>
+<div class="tj"><h4>💼 관련 직업 예시 <small>커리어넷 결과지 수록 직업 중 일부</small></h4><span class="jb">감독·연출자</span><span class="jb">기자</span><span class="jb">광고·홍보전문가</span><span class="jb">경영컨설턴트</span><span class="jb">경찰관</span><span class="jb">소방관</span><span class="jb">사회복지사</span><span class="jb">상담전문가</span><span class="jb">사회단체활동가</span><span class="jb">수의사</span><span class="jb">도시·교통설계전문가</span><span class="jb">시각디자이너</span><span class="jb">제품디자이너</span><span class="jb">인테리어디자이너</span><span class="jb">패션디자이너</span><span class="jb">정밀농업기술자</span></div></div><div class="tblock" id="t-A" style="--c:#8c78c0"><div class="th"><span class="ti">🏆</span><div><h3>성취지향형</h3><div class="tv"><span class="vchip">🎯 성취</span><span class="vchip">🏅 사회적 인정</span><span class="vchip">🕊️ 자율성</span></div></div></div>
+<p class="tdesc">일을 통해 <b>무언가를 이루고</b> 싶어요. 스스로 세운 목표의 성취, 그에 따른 인정, 스스로 결정하는 자율성을 중요하게 생각해요.</p>
+<div class="vgrid"><article class="vc" id="v-achv" style="--c:#8c78c0"><div class="vh"><span class="vi">🎯</span><div><h3>성취</h3><span class="vt">성취지향</span></div></div>
+<p class="vd">능력을 발휘해서 스스로 세운 목표를 이루는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;목표를 세우고 해냈을 때 가장 뿌듯해요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>결과가 분명하게 보이고 목표가 뚜렷한 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 직업에서 &quot;잘했다&quot;는 것은 무엇으로 확인할까?</div></article><article class="vc" id="v-recog" style="--c:#8c78c0"><div class="vh"><span class="vi">🏅</span><div><h3>사회적 인정</h3><span class="vt">성취지향</span></div></div>
+<p class="vd">다른 사람에게 인정받고 존경받는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;사람들에게 인정받는 전문가가 되고 싶어요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>전문성이 사회적으로 존중받는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>사람들은 이 직업을 어떻게 바라보고 있을까?</div></article><article class="vc" id="v-auto" style="--c:#8c78c0"><div class="vh"><span class="vi">🕊️</span><div><h3>자율성</h3><span class="vt">성취지향</span></div></div>
+<p class="vd">일의 내용과 환경을 스스로 결정하고 선택하는 것</p>
+<div class="vr"><span>💬 이런 말을 한다면</span>&quot;누가 시키는 대로만 하는 건 답답해요&quot;</div>
+<div class="vr"><span>💼 채워지는 일</span>일하는 방식·시간·장소를 스스로 정할 수 있는 일</div>
+<div class="vr q"><span>🔍 직업 조사 질문</span>이 직업에서 내가 스스로 정할 수 있는 것은 무엇일까?</div></article></div>
+<div class="tj"><h4>💼 관련 직업 예시 <small>커리어넷 결과지 수록 직업 중 일부</small></h4><span class="jb">변호사</span><span class="jb">판사·검사</span><span class="jb">일반의사</span><span class="jb">한의사</span><span class="jb">치과의사</span><span class="jb">건축사</span><span class="jb">기업 CEO</span><span class="jb">투자분석가</span><span class="jb">금융자산운용가</span><span class="jb">시스템소프트웨어개발자</span><span class="jb">정보보호전문가</span><span class="jb">생물학연구원</span><span class="jb">인문사회계열교수</span><span class="jb">번역가</span><span class="jb">행사기획자</span><span class="jb">직업운동선수</span></div></div></section>
+
+<section class="sec" id="same"><h2><span class="no">04</span>같은 직업, 다른 가치</h2>
+<p class="lead">같은 직업이라도 <b>어떤 가치를 중요하게 여기느냐</b>에 따라 만족을 느끼는 순간이 달라요. 커리어넷 결과지의 "가치지향 적용 사례" 방식을 참고해 학생들이 많이 희망하는 직업으로 만들어 봤어요.</p>
+<table class="same"><thead><tr><th></th><th style="--c:#4f8fa8">🏠 안정지향</th><th style="--c:#d46a7e">💗 의미지향</th><th style="--c:#e0a23c">🚀 변화지향</th><th style="--c:#8c78c0">🏆 성취지향</th></tr></thead><tbody><tr><th>교사</th><td style="--c:#4f8fa8">정년이 보장되고 방학이 있어 생활이 안정적일 때</td><td style="--c:#d46a7e">학생들이 성장하는 모습을 볼 때</td><td style="--c:#e0a23c">새로운 수업 방법을 시도하고 학교를 바꿔 갈 때</td><td style="--c:#8c78c0">맡은 반의 목표를 세우고 이뤄 낼 때</td></tr><tr><th>간호사</th><td style="--c:#4f8fa8">어디서든 일할 수 있는 전문 자격이 있을 때</td><td style="--c:#d46a7e">환자와 동료들과 함께하며 보람을 느낄 때</td><td style="--c:#e0a23c">응급 상황에서 생명을 구하는 변화를 만들 때</td><td style="--c:#8c78c0">전문간호사·관리자로 전문성을 인정받을 때</td></tr><tr><th>개발자</th><td style="--c:#4f8fa8">수요가 꾸준한 기술로 오래 일할 때</td><td style="--c:#d46a7e">좋아하는 코딩을 하며 계속 배울 때</td><td style="--c:#e0a23c">세상에 없던 서비스로 사람들의 생활을 바꿀 때</td><td style="--c:#8c78c0">어려운 문제를 해결하고 실력을 인정받을 때</td></tr><tr><th>요리사</th><td style="--c:#4f8fa8">안정적인 보수를 받는 주방에서 일할 때</td><td style="--c:#d46a7e">요리하는 즐거움과 손님의 미소를 볼 때</td><td style="--c:#e0a23c">새로운 메뉴와 맛을 개발할 때</td><td style="--c:#8c78c0">내 이름을 건 식당을 열고 인정받을 때</td></tr></tbody></table>
+<div class="research">💡 <b>내 희망 직업으로 해 보기</b> · 희망 직업을 하나 정하고, 내 가치지향 유형이 그 직업에서 <b>어떤 순간에 채워질지</b> 한 문장으로 적어 보세요. 채워지기 어렵다면 <b>같은 분야의 다른 직업</b>이나 <b>다른 일터</b>(공공기관·기업·창업 등)를 함께 찾아봐요.</div></section>
+
+<section class="sec" id="care"><h2><span class="no">05</span>가치관 검사 결과, 똑똑하게 보는 법</h2>
+<div class="warn">
+<div><b>⭕ 정답이 없어요</b>직업가치관검사는 맞고 틀리거나 좋고 나쁜 것으로 구분할 수 없어요(커리어넷, n.d.). "보수"를 중요하게 여기는 것도, "사회적 기여"를 중요하게 여기는 것도 <b>모두 존중받아야 할 기준</b>이에요.</div>
+<div><b>🔄 가치관은 자라면서 달라져요</b>장기 추적 연구를 모은 메타분석에서 직업가치는 비교적 안정적이지만, 그 안정성은 나이가 들수록 높아지며 <b>대학생 시기(18~22세)에 가장 많이 변했어요</b>(Jin &amp; Rounds, 2012). 사회 진출 시기에도 계속 변해요(Lechner et al., 2017).</div>
+<div><b>📏 검사 점수는 "지금"의 기록</b>커리어넷 검사의 내적 일관성은 높지만(α≈.93), 다시 검사했을 때의 상관은 중학생 .30 이상, 고등학생 .40 이상으로 보고되어 있어요(커리어넷, n.d.). <b>시간이 지나면 다시 검사</b>해 보는 것이 좋아요.</div>
+<div><b>🎯 모든 가치를 채우는 직업은 없어요</b>12가지를 모두 중요하게 여길 수 있지만, 다 채우기 어려울 때는 <b>가장 중요한 3가지를 우선</b> 고려해요(커리어넷, n.d.). 그래서 결과지의 <b>순위</b>가 중요해요.</div>
+<div class="ok"><b>✅ 이렇게 활용해요</b>① 상위 가치 3개와 <b>그 이유</b> 말해 보기 ② 흥미·적성 결과와 <b>함께</b> 보기 ③ 관심 직업이 그 가치를 <b>채워 주는지</b> 조사하기 ④ 직업뿐 아니라 <b>일터(조직)</b>의 가치도 확인하기</div>
+<div class="ok"><b>✅ 흥미·적성과 가치관이 다를 때</b>좋아하고 잘하는 일인데 가치와 맞지 않는다면, 그 분야 안에서 <b>가치가 채워지는 역할·일터</b>를 찾아봐요. 예: 그림을 좋아하고 "안정성"이 중요하다면 → 프리랜서보다 <b>기업 디자이너·미술교사</b>.</div>
+</div></section>
+
+<section class="sec" id="act"><h2><span class="no">06</span>상담 시간에 함께 해 보기</h2>
+<div class="steps">
+<div><span class="n">STEP 1</span><b>결과 읽기</b>상위 가치 3개와 가치지향 유형을 확인하고, <b>결과에 동의하는지</b> 물어요.</div>
+<div><span class="n">STEP 2</span><b>이유 찾기</b>그 가치가 중요해진 <b>경험·사람·장면</b>을 이야기해요. (가족, 아르바이트, 봉사 등)</div>
+<div><span class="n">STEP 3</span><b>직업 점검</b>희망 직업이 그 가치를 <b>채워 주는지</b> "직업 조사 질문"으로 확인해요.</div>
+<div><span class="n">STEP 4</span><b>우선순위 정하기</b>가치가 충돌할 때 <b>무엇을 먼저</b> 챙길지 정하고 진로 계획에 반영해요.</div>
+</div>
+<ol class="act">
+<li>내가 중요하게 생각하는 가치 1~3위는 무엇이고, <b>왜</b> 중요한가요?<small>"부모님이 원해서"인지 "내가 원해서"인지 구분해 보세요.</small></li>
+<li><b>가치관 경매</b>: 100만 원이 있다면 12가지 가치 중 무엇에 얼마를 걸까요? 꼭 사고 싶은 가치 3개와 금액을 적어 보세요.<small>가치의 상대적 중요도를 확인하는 활동이에요.</small></li>
+<li>"이 직업은 절대 못 하겠다" 싶은 직업과 그 이유를 적어 보세요. 그 이유에 <b>숨은 가치</b>는 무엇인가요?</li>
+<li>희망 직업 종사자를 인터뷰한다면, 내 상위 가치와 관련해 <b>어떤 질문</b>을 하고 싶나요?<small>각 가치의 "직업 조사 질문"을 참고하세요.</small></li>
+<li>내 흥미·적성 결과와 비교했을 때, <b>세 가지가 모두 만나는 직업</b>은 무엇인가요?</li>
+<li>10년 뒤 나의 하루를 상상해 보세요. 그 하루에서 <b>가장 지키고 싶은 가치</b> 하나는?</li>
+</ol>
+<div class="teacher">👩‍🏫 <b>교사용 팁</b> · 가치관은 학생의 생각을 판단하지 않는 것이 가장 중요해요. "보수"나 "안정성"을 고른 학생에게 "꿈이 없다"고 말하지 않도록 주의하세요. 결과지의 <b>12가지 점수</b>(중요도)와 <b>순위 3가지</b>(우선순위)는 서로 다를 수 있어요(커리어넷, n.d.). 둘이 다르면 그 차이를 상담 질문으로 활용하세요. 흥미(1-1·1-2), 적성(1-4), 성격(1-3) 페이지와 함께 보면 종합적인 자기이해에 도움이 돼요.</div></section>
+
+<section class="sec src" id="src"><h2><span class="no">출처</span>참고문헌</h2>
+<p class="lead">12가지 가치와 4가지 가치지향 유형, 유형별 관련 직업은 커리어넷 직업가치관검사 자료를 따랐어요. 가치 설명의 쉬운 풀이, 학교생활 말투 예시, 직업 조사 질문, 가치 충돌 짝, "같은 직업 다른 가치" 표, 상담 활동은 학생 이해를 돕기 위해 이 자료에서 새로 만든 것이에요.</p>
+<ol><li>커리어넷 (n.d.). <i>직업가치관검사 소개 및 검사결과 예시</i>(검사개발: 서미 외, 한국청소년상담복지개발원). 교육부·한국직업능력연구원. https://www.career.go.kr/cloud/w/inspect/value2/intro</li><li>Super, D. E. (1970). <i>Manual for the Work Values Inventory</i>. Houghton Mifflin.</li><li>Kalleberg, A. L. (1977). Work values and job rewards: A theory of job satisfaction. <i>American Sociological Review, 42</i>(1), 124–143.</li><li>Dawis, R. V., &amp; Lofquist, L. H. (1984). <i>A psychological theory of work adjustment</i>. University of Minnesota Press.</li><li>Schwartz, S. H. (1992). Universals in the content and structure of values: Theoretical advances and empirical tests in 20 countries. <i>Advances in Experimental Social Psychology, 25</i>, 1–65.</li><li>Brown, D. (2002). The role of work and cultural values in occupational choice, satisfaction, and success: A theoretical statement. <i>Journal of Counseling &amp; Development, 80</i>(1), 48–56.</li><li>Kristof, A. L. (1996). Person–organization fit: An integrative review of its conceptualizations, measurement, and implications. <i>Personnel Psychology, 49</i>(1), 1–49.</li><li>Kristof-Brown, A. L., Zimmerman, R. D., &amp; Johnson, E. C. (2005). Consequences of individuals' fit at work: A meta-analysis of person–job, person–organization, person–group, and person–supervisor fit. <i>Personnel Psychology, 58</i>(2), 281–342. https://doi.org/10.1111/j.1744-6570.2005.00672.x</li><li>Jin, J., &amp; Rounds, J. (2012). Stability and change in work values: A meta-analysis of longitudinal studies. <i>Journal of Vocational Behavior, 80</i>(2), 326–339.</li><li>Lechner, C. M., Sortheix, F. M., Göllner, R., &amp; Salmela-Aro, K. (2017). The development of work values during the transition to adulthood: A two-country study. <i>Journal of Vocational Behavior, 99</i>, 52–65. https://doi.org/10.1016/j.jvb.2016.12.004</li></ol></section>
+</main>
+<nav class="tabs"><a class="index" href="index.html">INDEX</a><a href="#about">가치관이란?</a><a href="#find">직업 찾기</a><a href="#types">4유형·12가치</a><a href="#same">같은 직업</a><a href="#care">해석 주의점</a><a href="#act">상담 활동</a><a href="1-4%20%EC%A7%81%EC%97%85%EC%A0%81%EC%84%B1_%EC%97%AD%EB%9F%89%EB%B3%84_%EC%A7%81%EC%97%85%EC%95%88%EB%82%B4.html">1-4 적성</a></nav>
+<script>
+const TY={"S": {"n": "안정지향", "ic": "🏠", "c": "#4f8fa8", "vs": ["stab", "pay", "wlb"], "jobs": ["초등학교교사", "약사", "회계사", "세무사", "변리사", "노무사", "물리치료사", "방사선사", "임상병리사", "사서", "영양사", "항공교통관제사", "항공기정비원", "철도·지하철기관사", "자동차정비원", "치과위생사"]}, "M": {"n": "의미지향", "ic": "💗", "c": "#d46a7e", "vs": ["fun", "belong", "grow"], "jobs": ["간호사", "보육교사", "유치원교사", "특수교사", "임상심리사", "응급구조사", "작가", "만화가", "사진작가", "음악가", "웹디자이너", "학예사(큐레이터)", "아나운서", "통역가", "제과·제빵사", "스포츠강사"]}, "C": {"n": "변화지향", "ic": "🚀", "c": "#e0a23c", "vs": ["chal", "infl", "contr"], "jobs": ["감독·연출자", "기자", "광고·홍보전문가", "경영컨설턴트", "경찰관", "소방관", "사회복지사", "상담전문가", "사회단체활동가", "수의사", "도시·교통설계전문가", "시각디자이너", "제품디자이너", "인테리어디자이너", "패션디자이너", "정밀농업기술자"]}, "A": {"n": "성취지향", "ic": "🏆", "c": "#8c78c0", "vs": ["achv", "recog", "auto"], "jobs": ["변호사", "판사·검사", "일반의사", "한의사", "치과의사", "건축사", "기업 CEO", "투자분석가", "금융자산운용가", "시스템소프트웨어개발자", "정보보호전문가", "생물학연구원", "인문사회계열교수", "번역가", "행사기획자", "직업운동선수"]}}, VD={"stab": {"t": "S", "n": "안정성", "ic": "🛡️"}, "pay": {"t": "S", "n": "보수", "ic": "💰"}, "wlb": {"t": "S", "n": "일과 삶의 균형", "ic": "⚖️"}, "fun": {"t": "M", "n": "즐거움", "ic": "😊"}, "belong": {"t": "M", "n": "소속감", "ic": "🤝"}, "grow": {"t": "M", "n": "자기 계발", "ic": "📈"}, "chal": {"t": "C", "n": "도전성", "ic": "🧗"}, "infl": {"t": "C", "n": "영향력", "ic": "📣"}, "contr": {"t": "C", "n": "사회적 기여", "ic": "🌍"}, "achv": {"t": "A", "n": "성취", "ic": "🎯"}, "recog": {"t": "A", "n": "사회적 인정", "ic": "🏅"}, "auto": {"t": "A", "n": "자율성", "ic": "🕊️"}}, CF=[["stab", "chal", "안정성 ↔ 도전성", "오래 안정적으로 일하는 직업은 변화가 적고, 도전이 많은 직업은 불확실성이 커요."], ["belong", "auto", "소속감 ↔ 자율성", "조직의 일원으로 함께하려면 규칙과 협의를 따라야 할 때가 많아요."], ["wlb", "achv", "일과 삶의 균형 ↔ 성취", "높은 목표를 이루려면 시간과 에너지를 더 쏟아야 하는 시기가 있어요."], ["wlb", "pay", "일과 삶의 균형 ↔ 보수", "보수가 높은 일 중에는 근무 시간이 길거나 책임이 무거운 일이 많아요."], ["contr", "pay", "사회적 기여 ↔ 보수", "사회에 기여하는 일이 꼭 높은 보수로 이어지지는 않아요."], ["contr", "recog", "사회적 기여 ↔ 사회적 인정", "남을 돕는 일은 드러나지 않을 때도 많아요. 인정보다 의미를 볼 수 있어야 해요."]]; let sel=[];
+const esc=s=>s.replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+const chips=[...document.querySelectorAll('.chip')], out=document.getElementById('result');
+function render(){
+ chips.forEach(c=>{const i=sel.indexOf(c.dataset.k);c.classList.toggle('on',i>=0);
+  c.innerHTML=(i>=0?'<span class="rk">'+(i+1)+'</span>':'')+VD[c.dataset.k].ic+' '+esc(VD[c.dataset.k].n)});
+ if(!sel.length){out.innerHTML='<div class="empty">👆 검사 결과의 <b>"내가 중요하게 생각하는 직업가치관 1~3위"</b>를 순서대로 눌러 보세요. 검사 전이라면 지금 마음에 드는 가치 3개를 골라 보세요.</div>';return}
+ const sc={S:0,M:0,C:0,A:0};sel.forEach((k,i)=>sc[VD[k].t]+=3-i);
+ const tot=sel.reduce((a,_,i)=>a+3-i,0), order=Object.keys(sc).sort((a,b)=>sc[b]-sc[a]), top=order[0];
+ let h='<div class="rbox"><h4>📊 내가 고른 가치의 유형 분포 <small style="color:#8a7a80;font-weight:600">(1위 3점 · 2위 2점 · 3위 1점)</small></h4><div class="bars">'+order.map(t=>'<div class="bar" style="--c:'+TY[t].c+'"><span>'+TY[t].ic+' '+TY[t].n+'</span><span class="tr"><span class="fl" style="display:block;width:'+(sc[t]/tot*100)+'%"></span></span><span>'+sc[t]+'점</span></div>').join('')+'</div></div>';
+ const tops=order.filter(t=>sc[t]==sc[top]&&sc[t]>0);
+ h+='<div class="rbox"><h4>💼 '+tops.map(t=>TY[t].ic+' '+TY[t].n+'형').join(' · ')+'과 관련된 직업 예시 <small style="color:#8a7a80;font-weight:600">(커리어넷 결과지 수록 직업 중 일부)</small></h4>'+tops.map(t=>'<div style="--c:'+TY[t].c+'">'+TY[t].jobs.map(j=>'<span class="jb">'+esc(j)+'</span>').join('')+'</div>').join('')+'<div class="empty">'+tops.map(t=>'<a href="#t-'+t+'">'+TY[t].n+'형 자세히 보기</a>').join(' · ')+'</div></div>';
+ const cs=CF.filter(c=>sel.includes(c[0])&&sel.includes(c[1]));
+ h+='<div class="rbox"><h4>⚖️ 가치 충돌 체크</h4>'+(cs.length?cs.map(c=>'<div class="cf"><b>'+esc(c[2])+'</b> · '+esc(c[3])+' 두 가치 중 <b>무엇을 먼저</b> 챙길지, 또는 <b>둘을 함께 채울 수 있는 직업·직장</b>이 있는지 이야기해 보세요.</div>').join(''):'<div class="empty">고른 가치들 사이에 크게 부딪히는 짝은 없어요. 이 가치들을 <b>함께</b> 채워 줄 직업을 찾아보세요.</div>')+'</div>';
+ out.innerHTML=h}
+chips.forEach(c=>c.onclick=()=>{const k=c.dataset.k,i=sel.indexOf(k);if(i>=0)sel.splice(i,1);else{if(sel.length>=3)sel.shift();sel.push(k)}render()});
+document.querySelector('.reset').onclick=()=>{sel=[];render()};
+render();
+</script></body></html>
